@@ -1,0 +1,58 @@
+
+{
+    "version": 1,
+    "formatters": {
+        "console_formatter": {
+            "format": "[%(asctime)s] %(levelname)s: %(message)s"
+        },
+        "file_formatter": {
+            "format": "[%(asctime)s] %(levelname)s: %(message)s"
+        }
+    },
+    "handlers": {
+        "console": {
+            "level": "INFO",
+            "class": "logging.StreamHandler",
+            "formatter": "console_formatter"
+        },
+        "verbose": {
+            "level": "DEBUG",
+            "filename": "output/logs/verbose.log",
+            "mode": "a",
+            "class": "logging.handlers.RotatingFileHandler",
+            "maxBytes": 5242880,
+            "backupCount": 1,
+            "formatter": "file_formatter"
+        },
+        "concise": {
+            "level": "INFO",
+            "filename": "output/logs/concise.log",
+            "mode": "a",
+            "class": "logging.handlers.RotatingFileHandler",
+            "maxBytes": 5242880,
+            "backupCount": 1,
+            "formatter": "file_formatter" 
+        },
+        "error": {
+            "level": "ERROR",
+            "filename": "output/logs/error.log",
+            "mode": "a",
+            "class": "logging.handlers.RotatingFileHandler",
+            "maxBytes": 5242880,
+            "backupCount": 1,
+            "formatter": "file_formatter" 
+        }
+    },
+    "loggers": {
+        "tsutils": {
+            "propagate": true,
+            "handlers": [
+                "console",
+                "error",
+                "verbose",
+                "concise"
+            ],
+            "level": "DEBUG"
+        }
+    }
+}

@@ -90,22 +90,6 @@ def create_csv_file(filename: str, header: list = None, encoding: str = 'utf-8',
     return csv_file, writer
 
 
-def file_to_dict(filename: str, encoding: str = 'utf8') -> dict:
-    """
-    This function reads a file and converts it to a Python dictionary. It reads JSON-like dictionary from a file.
-
-    :param filename: a file where a JSON-like dictionary is stored. Can be Python dict or JSON type.
-    :param encoding: encoding of the filename. Default to utf8.
-    :return: Python dict object.
-    """
-    dict_file = open(filename, 'r', encoding=encoding)
-    dict_string = dict_file.read()
-    dict_file.close()
-    dictionary = loads(dict_string)
-
-    return dictionary
-
-
 def tokenize_string(string: str, to_lower: bool = True, del_apostrophe: bool = True, min_token_len: int = 0) -> list:
     """
     This function splits a string into lowercased words. It also deletes punctuation marks, leaving words and numbers.
