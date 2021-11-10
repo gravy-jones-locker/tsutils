@@ -5,9 +5,6 @@ action (even where it has to be composed..) and associated convenience classes.
 
 from __future__ import annotations
 
-from seleniumwire.webdriver import Chrome
-from requests import Session as InbuiltSession
-
 SUCCESS_CODES = [200]
 SERVERSIDE_ERROR_CODES = [404, 500]
 # TODO extend these lists..
@@ -34,15 +31,6 @@ class Response:
         self.error = None
         if self.status_code not in SUCCESS_CODES:
             self.error = Error(self.status_code)
-            
-    @classmethod
-    def from_driversession(cls, driver: Chrome) -> Response:
-        """
-        Configure a Response object from the driver attached to a DriverSession
-        object.
-        :param: a seleniumwire driver instance with 
-        """
-        cls.__init__(status_code, content, headers)
 
 class Error:
     """

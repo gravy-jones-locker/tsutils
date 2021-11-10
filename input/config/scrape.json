@@ -16,7 +16,7 @@
     "LOAD_TIMEOUT": 15,
     "RETRIES": 0,
     "CHROMEDRIVER_PATH": null,
-    "CAPTCHA_TEXT": [
+    "CAPTCHA_TXT": [
         "captcha"
     ]
 }

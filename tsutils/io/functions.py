@@ -9,4 +9,4 @@ def file_to_dict(fpath: str, encoding: str='utf8') -> dict:
     """
     with open(fpath, 'r', encoding=encoding) as infile:
         data = infile.read()
-    return json.load(data)
+    return json.loads(data)
