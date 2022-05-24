@@ -4,27 +4,22 @@ import logging
 logger = logging.getLogger('tsutils')
 
 class NotificationError(Exception):
-    """Logs the error message and moves on"""
-    def __init__(self, message, errors):
-        logger.error(message)
+    suffix = ''
+    def __init__(self, *msg):
+        logger.error(''.join(msg) + self.suffix)
 
 class CriticalError(NotificationError):
-    """Stops execution altogether"""
-    def __init__(self, message, errors):
-        super().__init__(message + ' - CRITICAL ERROR', errors)
+    suffix = ' CRITICAL - QUITTING'
+    def __init__(self, *msg):
+        super().__init__(*msg)
         sys.exit()
         
 class SkipIterationError(NotificationError):
-    """Indicates that an iteration should be skipped"""
-    def __init__(self, message, errors):
-        super().__init__(message + ' - skipping iteration', errors)
+    suffix = '... skipping'
+
+class QuietError(Exception):
+    def __init__(self, *msg):
+        logger.debug(''.join(msg))
         
 class SilentError(Exception):
-    """Results in nothing whatsoever"""
     pass
-
-class InvalidSettingError(CriticalError):
-    """Notifies the user of the incorrect setting passed and quits"""
-    def __init__(self, key, config_dict, errors):
-        msg = f'{key} is not a valid setting. Accepted fields are: {", ".join(list(config_dict.keys()))}' 
-        super().__init__(msg, errors)

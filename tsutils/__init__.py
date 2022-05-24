@@ -1,13 +1,21 @@
-# Load all the static config settings as attributes of the config module
-import os
+from pathlib import Path
 
-from .io import file_to_dict
-from . import config
+ROOT_DIR = str(Path(__file__).absolute().parents[0])
 
-for fname in os.listdir('input/config'):
-    setattr(config, fname[:-5], file_to_dict(f'input/config/{fname}'))
+from tsutils.common.io import load_json
 
-# Load logger configuration saved in logconf.json
+logconf = load_json(f'{ROOT_DIR}/input/config/log.json')
+for handler, conf in logconf["handlers"].items():
+    if handler == 'console':
+        continue
+    conf["filename"] = conf["filename"].replace('{ROOT_DIR}', ROOT_DIR)
+
 from logging.config import dictConfig
 
-dictConfig(config.log)
+dictConfig(logconf)
+
+import os
+
+if os.environ.get('TSUTILS_DEBUG') == 'True':
+    import logging
+    logging.getLogger('tsutils').setLevel('DEBUG')

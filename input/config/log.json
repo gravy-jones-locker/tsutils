@@ -11,13 +11,13 @@
     },
     "handlers": {
         "console": {
-            "level": "INFO",
+            "level": "DEBUG",
             "class": "logging.StreamHandler",
             "formatter": "console_formatter"
         },
         "verbose": {
             "level": "DEBUG",
-            "filename": "output/logs/verbose.log",
+            "filename": "{ROOT_DIR}/output/logs/verbose.log",
             "mode": "a",
             "class": "logging.handlers.RotatingFileHandler",
             "maxBytes": 5242880,
@@ -26,7 +26,7 @@
         },
         "concise": {
             "level": "INFO",
-            "filename": "output/logs/concise.log",
+            "filename": "{ROOT_DIR}/output/logs/concise.log",
             "mode": "a",
             "class": "logging.handlers.RotatingFileHandler",
             "maxBytes": 5242880,
@@ -35,7 +35,7 @@
         },
         "error": {
             "level": "ERROR",
-            "filename": "output/logs/error.log",
+            "filename": "{ROOT_DIR}/output/logs/error.log",
             "mode": "a",
             "class": "logging.handlers.RotatingFileHandler",
             "maxBytes": 5242880,
@@ -52,7 +52,7 @@
                 "verbose",
                 "concise"
             ],
-            "level": "DEBUG"
+            "level": "INFO"
         }
     }
 }

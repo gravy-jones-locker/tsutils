@@ -2,4 +2,11 @@
 __pycache__
 .~lock*
 output/logs/**
+.pdbrc
+input/data/chrome/**
+test_files/**
+test_files
+test.py
+build/**
+build
 !.gitkeep

@@ -7,6 +7,9 @@ name = "pypi"
 requests = "*"
 selenium-wire = "*"
 packaging = "*"
+lxml = "*"
+undetected-chromedriver = "*"
+cloudscraper = "*"
 
 [dev-packages]
 
