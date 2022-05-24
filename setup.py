@@ -7,12 +7,7 @@ setup(
     description='Utility bindings for The Syllabus codebase',
     author='The Syllabus',
     packages=find_packages(),
+    include_package_data=True,
     install_requires=[
-        'requests',
-        'selenium-wire',
-        'packaging',
-        'lxml',
-        'undetected-chromedriver',
-        'cloudscraper'
         ]
 )

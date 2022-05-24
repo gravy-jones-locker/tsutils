@@ -1,12 +1,12 @@
 .venv
 __pycache__
 .~lock*
-output/logs/**
+tsutils/output/logs/**
 .pdbrc
-input/data/chrome/**
+tsutils/input/data/chrome/**
 test_files/**
 test_files
 test.py
-build/**
 build
+pyproject.toml
 !.gitkeep
