@@ -12,7 +12,7 @@ def _read_bytes(fname: str) -> bytes:
         return infile.read()
 def _read_text_lines(fname: str) -> str:
     with open(fname, 'r') as infile:
-        return infile.readlines()
+        return infile.read().splitlines()
 
 def load_json(fpath: str) -> dict:
     """
@@ -56,3 +56,13 @@ def pickle_obj(obj: Any, fpath: str) -> None:
     """
     with open(fpath, 'wb+') as outfile:
         pickle.dump(obj, outfile)
+
+def write_csv(rows: list, fpath: str, flat: bool=False) -> None:
+    """
+    Write a list of rows to a csv at the given fpath.
+    """
+    with open(fpath, 'w+') as outfile:
+        writer = csv.writer(outfile, delimiter=',', quoting=csv.QUOTE_ALL)
+        if flat:
+            rows = [[x] for x in rows]
+        writer.writerows(rows)

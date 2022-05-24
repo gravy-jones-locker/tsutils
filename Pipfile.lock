@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3e24ffe98d5880be98fd5bf1ae1a3b515b8cb0870a364f2b0633f3cff6d66bca"
+            "sha256": "38c1fa07749d9080d9e095435c6787816e33cbcd1d5993a172fbc6655011809a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -453,8 +453,8 @@
             "version": "==0.9.2"
         },
         "tsutils": {
-            "editable": true,
-            "path": "."
+            "path": ".",
+            "version": "==0.1"
         },
         "undetected-chromedriver": {
             "hashes": [

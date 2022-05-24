@@ -92,20 +92,20 @@ class Pool:
         """
         out = []
         for (func, args, kwargs) in self.tasks:
-            res = self._handle_task(func, *args, **kwargs)
-            if self.stop_early:
+            res, exc = self._handle_task(func, *args, **kwargs)
+            if self.stop_early and exc is None:
                 return res
             out.append(res)
-        return out
+        raise exc
 
-    def _handle_task(self, func: Callable, *args, **kwargs) -> Any:
+    def _handle_task(self, func: Callable, *args, **kwargs) -> tuple:
         try:
-            return func(*args, **kwargs)
+            return func(*args, **kwargs), None
         except Exception as e:
             self._log_error()
             if self.raise_errs:
                 raise e
-            return None
+            return None, e
         finally:  # Add done counter and log progress in any case
             with self.lock:
                 self.tasks_completed += 1
@@ -119,7 +119,7 @@ class Pool:
             futures = self._configure_threads(executor)
             if self.stop_early:
                 return self._parse_completing_threads(futures)
-        return [x.result() for x in futures]
+        return [x.result()[0] for x in futures]
 
     def _configure_threads(self, executor: ThreadPoolExecutor) -> list:
         out = []
@@ -133,11 +133,12 @@ class Pool:
         while self.tasks_completed != self.tasks_total:
             done, not_done = wait(futures, return_when=FIRST_COMPLETED)
             for f in done:
-                if f.exception():
+                res, exc = f.result()
+                if exc is not None:
                     continue
                 self._terminate_threads(not_done)
-                return f.result()
-        raise f.exception()
+                return res
+        raise exc
 
     def __enter__(self) -> Pool:
         return self

@@ -7,9 +7,10 @@ from __future__ import annotations
 from typing import Generator, Union
 from itertools import cycle, product
 
-from tsutils.common.io import load_csv, load_lines
+from tsutils.common.io import load_csv 
+from tsutils import ROOT_DIR    
 
-UAS_FPATH = 'input/data/useragents.csv'
+UAS_FPATH = f'{ROOT_DIR}/input/data/useragents.csv'
 
 class Hosts:
     """
@@ -31,7 +32,7 @@ class Hosts:
     def _load_proxies(self, proxy_file: Union[str, None]) -> list:
         if proxy_file is None:
             return ['localhost']
-        return load_lines(proxy_file)
+        return load_csv(proxy_file, flat=True)
     
     def _load_user_agents(self) -> list:
         return load_csv(UAS_FPATH, flat=True)

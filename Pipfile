@@ -10,7 +10,7 @@ packaging = "*"
 lxml = "*"
 undetected-chromedriver = "*"
 cloudscraper = "*"
-tsutils = {editable = true, path = "."}
+tsutils = {path = "."}
 
 [dev-packages]
 
