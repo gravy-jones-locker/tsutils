@@ -1,2 +1,3 @@
 recursive-include tsutils/input *
 recursive-include tsutils/output *
+recursive-exclude tsutils/input/data/chrome *
