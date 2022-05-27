@@ -34,7 +34,7 @@ class Chrome:
     def load(cls, stealth: bool=False, **settings) -> Chrome:
         """
         Configure and return a Selenium ChromeDriver instance.
-        :param settings: override DEFAULTS by passing values here.
+        :param settings: override defaults by passing values here.
         :return: a fully configured Chrome instance.
         """
         if stealth:
@@ -46,7 +46,7 @@ class ExtendedChrome:
     This is an abstract class which shares resources between the concrete 
     WiredChrome and StealthChrome classes.
     """
-    DEFAULTS = {
+    defaults = {
         "headless": True,
         "chromedriver_path": None,
         "incognito": False,
@@ -65,7 +65,7 @@ class ExtendedChrome:
         Compile settings then load ChromeDriver instance and set important
         settings.
         """
-        self._settings = update_defaults(self.DEFAULTS, settings)
+        self._settings = update_defaults(self.defaults, settings)
         if self._settings["incognito"]:
             self.reset()
         self._init_driver()
@@ -180,7 +180,6 @@ class StealthChrome(ExtendedChrome, uc.Chrome):
     This class facilitates stealth browsing using the undetected_chromedriver
     patch.
     """
-
     def compose_response(self) -> Response:
         """
         Build a response object out of the window/request contents.

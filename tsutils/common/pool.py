@@ -96,7 +96,9 @@ class Pool:
             if self.stop_early and exc is None:
                 return res
             out.append(res)
-        raise exc
+        if self.stop_early:
+            raise exc
+        return out
 
     def _handle_task(self, func: Callable, *args, **kwargs) -> tuple:
         try:

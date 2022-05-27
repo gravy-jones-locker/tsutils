@@ -19,10 +19,12 @@ class Scraper:
     A Scraper instance is an interface through which individual calls are made 
     and responses parsed then returned.
     """
-    DEFAULTS = {
+    defaults = {
+        "proxy_file": None,
         "request_retries": 0,
         "request_retry_interval": 1,
-        "rotate_host": False
+        "rotate_host": False,
+        "headers": {}
     }
     class Decorators:
     
@@ -44,9 +46,9 @@ class Scraper:
                     iteration += 1
             return inner
 
-    def __init__(self, proxy_file: str=None, **settings) -> None:
-        self._hosts = Hosts(proxy_file)
-        self._settings = update_defaults(self.DEFAULTS, settings)
+    def __init__(self, **settings) -> None:
+        self._hosts = Hosts(settings["proxy_file"])
+        self._settings = update_defaults(self.defaults, settings)
     
     @Decorators.handle_response
     def get(self, url: str, *args, **kwargs) -> Response:
@@ -55,17 +57,19 @@ class Scraper:
     def _parse_response(self, resp: Response) -> Response:
         if resp.status_code == 404:
             raise ResourceNotFoundError(resp.url)
-        # TODO might want to be able to handle redirect handling - need concrete
+        # TODO might want to be able to do redirect handling - need concrete
         # use case.
         if resp.captchaed:
             resp = self._solve_captcha(resp)
             if resp.captchaed:
-                raise CaptchaHitError(resp)
+                raise CaptchaHitError(resp.url)
         if not resp.ok:
-            raise RequestFailedError(resp)
+            raise RequestFailedError(resp.msg)
         return resp
     
     def _handle_error(self, exc: Exception, iteration: int) -> None:
+        if isinstance(exc, ResourceNotFoundError):
+            raise exc
         if self._settings["rotate_host"]:
             self._rotate_host()
         if iteration == self._settings["request_retries"]:

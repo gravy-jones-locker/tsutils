@@ -4,11 +4,16 @@ supervision of avoidable scraping failures.
 """
 from __future__ import annotations
 
+import os
+import logging
+
 from typing import Generator, Union
 from itertools import cycle, product
 
 from tsutils.common.io import load_csv 
 from tsutils import ROOT_DIR    
+
+logger = logging.getLogger('tsutils')
 
 UAS_FPATH = f'{ROOT_DIR}/input/data/useragents.csv'
 
@@ -30,9 +35,11 @@ class Hosts:
             yield Host._load(proxy, user_agent)
     
     def _load_proxies(self, proxy_file: Union[str, None]) -> list:
-        if proxy_file is None:
-            return ['localhost']
-        return load_csv(proxy_file, flat=True)
+        if proxy_file is not None:
+            if os.path.isfile(proxy_file):
+                return load_csv(proxy_file, flat=True)
+            logger.error(f'Proxy file at {proxy_file} not found. Ignoring')
+        return ['localhost']
     
     def _load_user_agents(self) -> list:
         return load_csv(UAS_FPATH, flat=True)

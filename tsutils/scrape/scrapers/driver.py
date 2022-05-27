@@ -14,7 +14,6 @@ from selenium.webdriver.common.by import By
 from typing import Callable
 
 from .scraper import Scraper
-
 from ..utils.response import Response as Response
 from ..utils.chrome import Chrome
 from ..exceptions import *
@@ -26,8 +25,8 @@ class Driver(Scraper):
     The Driver class integrates proxy/header rotation etc. into the browser
     actions exposed by the Chrome/WebDriver class.
     """
-    DEFAULTS = {
-        **Scraper.DEFAULTS,
+    defaults = {
+        **Scraper.defaults,
         "headless": True,  # The top three are Chrome defaults
         "chromedriver_path": None,
         "incognito": False,
@@ -52,13 +51,13 @@ class Driver(Scraper):
                 return driver._chrome.compose_response()
             return inner
 
-    def __init__(self, proxy_file: str=None, **settings) -> None:
+    def __init__(self, **settings) -> None:
         """
         Start the driver instance with all the configured settings.
         :param proxy_file: the path to a list of proxy values.
         :param settings: override DEFAULTs by passing values here.
         """
-        super().__init__(proxy_file, **settings)
+        super().__init__(**settings)
         self._chrome = Chrome.load(**self._settings, host=next(self._hosts))
 
     @Scraper.Decorators.handle_response

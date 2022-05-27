@@ -9,7 +9,7 @@ class NotificationError(Exception):
         logger.error(''.join(msg) + self.suffix)
 
 class CriticalError(NotificationError):
-    suffix = ' CRITICAL - QUITTING'
+    suffix = '... CRITICAL - QUITTING'
     def __init__(self, *msg):
         super().__init__(*msg)
         sys.exit()
@@ -22,4 +22,7 @@ class QuietError(Exception):
         logger.debug(''.join(msg))
         
 class SilentError(Exception):
+    pass
+
+class PoolError(CriticalError):
     pass

@@ -12,7 +12,7 @@ from seleniumwire.utils import decode
 from lxml import html
 from typing import Union
 
-from ..constants import BAD_COOKIE_KEYS, CAPTCHA_STRS
+from ..utils.constants import BAD_COOKIE_KEYS, CAPTCHA_STRS
 
 class Response(RequestsResponse):
     """

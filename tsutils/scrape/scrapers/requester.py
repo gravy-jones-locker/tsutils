@@ -18,8 +18,8 @@ class Requester(Scraper):
     This class integrates concurrency, host/proxy rotation and other common
     scraping helpers into a quasi-Requests interface.
     """
-    DEFAULTS = {
-        **Scraper.DEFAULTS,
+    defaults = {
+        **Scraper.defaults,
         "num_threads": 3,
         "timeout": 5,
         "prongs": 3,
@@ -43,11 +43,11 @@ class Requester(Scraper):
                     return pool.execute()
             return inner
 
-    def __init__(self, proxy_file: str=None, **settings) -> None:
+    def __init__(self, **settings) -> None:
         """
         Do usual construction and bind private '_sess' attribute.
         """
-        super().__init__(proxy_file, **settings)
+        super().__init__(**settings)
         self._sess = False
         self._host = False
 
@@ -94,7 +94,11 @@ class Requester(Scraper):
         **user_kwargs}
 
     def _get_headers(self, user_headers: dict, host: Host) -> None:
-        return {"User-Agent": host.user_agent, **user_headers}
+        return {
+            "User-Agent": host.user_agent, 
+            **self._settings["headers"],
+            **user_headers
+            }
     
     def _get_proxies(self, user_proxies: dict, host: Host) -> None:
         return {**host.proxy_dict, **user_proxies}
