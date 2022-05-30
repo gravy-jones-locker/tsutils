@@ -11,6 +11,7 @@ lxml = "*"
 undetected-chromedriver = "*"
 cloudscraper = "*"
 tsutils = {path = "."}
+selenium = "*"
 
 [dev-packages]
 

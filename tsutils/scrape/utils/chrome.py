@@ -39,7 +39,7 @@ class Chrome(uc.Chrome):
             '--no-first-run',
             '--no-service-autorun',
             '--disable-dev-shm-usage',
-            '--window-size=1920,1080'
+            '--window-size=1024,768'
             ]}
 
     def __init__(self, **settings) -> None:

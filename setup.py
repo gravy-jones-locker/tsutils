@@ -13,7 +13,7 @@ setup(
         'selenium-wire',
         'packaging',
         'lxml',
-        #'undetected-chromedriver',
+        'undetected-chromedriver',
         'cloudscraper',
         'selenium'
         ]
