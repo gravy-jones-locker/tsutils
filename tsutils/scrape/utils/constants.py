@@ -9,3 +9,9 @@ CAPTCHA_STRS = {
     'verify you\'re not a robot',
     'Please show you&#39;re not a robot'
 }
+IMG_EXTENSIONS = {
+    '.jpg',
+    '.png',
+    '.gif',
+    '.webp'
+}

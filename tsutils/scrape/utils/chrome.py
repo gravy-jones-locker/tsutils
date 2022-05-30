@@ -16,6 +16,7 @@ from ...common.datautils import update_defaults
 from ...common.exceptions import NotificationError
 from .hosts import Host, LocalHost
 from .response import Response
+from .constants import IMG_EXTENSIONS
 from ... import ROOT_DIR
 
 DATA_DIR = f'{ROOT_DIR}/input/data/chrome'
@@ -34,6 +35,8 @@ class Chrome(uc.Chrome):
         "incognito": False,
         "page_load_timeout": 15,
         "host": None,
+        "ignore_images": True,
+        "ignore_scripts": False,
         "load_args": [
             '--log-level=2',
             '--no-first-run',
@@ -73,11 +76,20 @@ class Chrome(uc.Chrome):
         return options
 
     def _intercept_requests(self, request: Request) -> None:
-        if request.path.endswith(('.png', '.jpg', '.gif')):
+        if self._ban_request(request):
             request.abort()
         elif self.host.user_agent is not None:
             del request.headers["User-Agent"]
             request.headers["User-Agent"] = self.host.user_agent
+    
+    def _ban_request(self, request: Request) -> bool:
+        if self._settings["ignore_images"]:
+            if request.path.endswith(tuple(IMG_EXTENSIONS)):
+                return True
+        if self._settings["ignore_scripts"]:
+            if request.path.endswith('js'):
+                return True
+        return False
     
     def click_xpath(self, xpath: str) -> None:
         """

@@ -34,7 +34,8 @@ class Driver(Scraper):
         "headless": True,  # The top three are Chrome defaults
         "chromedriver_path": None,
         "incognito": False,
-        "stealth": False,
+        "ignore_images": True,
+        "ignore_scripts": False,
         "load_timeout": 30,
         "load_retries": 3,
         "post_load_wait": 1,

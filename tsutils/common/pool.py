@@ -99,7 +99,6 @@ class Pool:
         out = []
         for (func, args, kwargs) in self.tasks:
             res, exc = self._handle_task(func, *args, **kwargs)
-            input()
             if self.stop_early and exc is None:
                 return res
             out.append(res)
