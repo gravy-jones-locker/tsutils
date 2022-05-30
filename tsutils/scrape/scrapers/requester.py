@@ -3,6 +3,8 @@ This module contains the Requester class for making simple calls to online
 resources. It adds useful scraping functionality to the underlying Requests
 interface.
 """
+from __future__ import annotations
+
 import cloudscraper
 import requests
 
@@ -12,6 +14,10 @@ from ..scrapers.scraper import Scraper
 from ..utils.response import Response
 from ..utils.hosts import Host
 from ...common.pool import Pool
+
+# Requester instances are shared between Sources wherever possible (i.e. when
+# their settings match).
+_instances = []
 
 class Requester(Scraper):
     """
@@ -50,6 +56,21 @@ class Requester(Scraper):
         super().__init__(**settings)
         self._sess = False
         self._host = False
+
+    @classmethod
+    def get_or_create(cls, **settings) -> Requester:
+        """
+        Return an existing Requester instance or create a new one.
+        :param settings: the settings to be passed to the requester.
+        :return a live requester instance.
+        """
+        global _instances
+
+        for rqstr in _instances:
+            if rqstr._settings == settings:
+                return rqstr
+        _instances.append(cls(**settings))
+        return _instances[-1]  # Return the instance that was just created
 
     @property
     def sess(self) -> cloudscraper.CloudScraper:
@@ -107,3 +128,17 @@ class Requester(Scraper):
         if self._settings["spin_hosts"]:
             return
         self._host = next(self._hosts)
+
+class APIRequester(Requester):
+    """
+    The APIRequester interface is a replica of the usual Requester class with
+    different presets/defaults.
+    """
+    defaults = {
+        **Requester.defaults,
+        "num_threads": 1,
+        "rotate_host": False,
+        "spin_hosts": False,
+        "content_types": [],
+        "prongs": 1
+    }

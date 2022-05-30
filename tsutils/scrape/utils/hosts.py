@@ -58,11 +58,13 @@ class Host:
         self.proxy = proxy
         self.user_agent = user_agent
         self.proxy_dict = self._build_proxy_dict()
+        self.proxy_dict_prefixed = self._build_proxy_dict(prefixed=True)
     
-    def _build_proxy_dict(self) -> dict:
-        return {"https": self.proxy,
-                "http": self.proxy,
-                "ftp": self.proxy}
+    def _build_proxy_dict(self, prefixed: bool=False) -> dict:
+        out = {"https": self.proxy, "http": self.proxy, "ftp": self.proxy}
+        if prefixed:
+            out = {k: k+'://'+v for k, v in out.items()}
+        return out
 
     def __str__(self) -> str:
         return f'{self.proxy} - {self.user_agent[:20]}...'
@@ -74,5 +76,5 @@ class LocalHost(Host):
     def __init__(self, user_agent: str) -> None:
         super().__init__(None, user_agent)
         
-    def _build_proxy_dict(self) -> dict:
+    def _build_proxy_dict(self, prefixed: bool=False) -> dict:
         return {}

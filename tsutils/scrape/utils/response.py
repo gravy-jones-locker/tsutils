@@ -10,7 +10,6 @@ from seleniumwire.request import Request as SWRequest
 from seleniumwire.request import Response as SWResponse
 from seleniumwire.utils import decode
 from lxml import html
-from typing import Union
 
 from ..utils.constants import BAD_COOKIE_KEYS, CAPTCHA_STRS
 
@@ -58,14 +57,6 @@ class Response(RequestsResponse):
             self._captchaed = self._detect_captcha()
         return self._captchaed
 
-    def xpath(self, statement: str) -> Union[str, html.HtmlElement]:
-        """
-        Return the contents of an xpath search on the response dom.
-        :param statement: an xpath statement e.g. '//a[@class="link"]'
-        :return: the result of the xpath search.
-        """
-        return self.dom.xpath(statement)
-    
     def _detect_captcha(self) -> bool:
         if any([x in self.text for x in CAPTCHA_STRS]):
             return True

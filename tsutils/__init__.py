@@ -5,7 +5,8 @@ ROOT_DIR = str(Path(__file__).absolute().parents[0])
 import sys
 import os
 
-os.environ["TSUTILS_DEBUG"] = str('--debug' in sys.argv)
+if str('--debug' in sys.argv) or 'pdb' in sys.modules.keys():
+    os.environ["TSUTILS_DEBUG"] = 'True'
 
 from tsutils.common.io import load_json
 

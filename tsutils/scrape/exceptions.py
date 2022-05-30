@@ -20,3 +20,6 @@ class SourceNotConfiguredError(SkipIterationError):
 class WrongFieldTypeError(SkipIterationError):
     def __init__(self, xpath) -> None:
         super().__init__(f'{xpath} could not be resolved into a string')
+
+class LiveDriverError(CriticalError):
+    pass

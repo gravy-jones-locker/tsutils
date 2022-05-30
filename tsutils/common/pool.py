@@ -5,6 +5,7 @@ logging settings.
 from __future__ import annotations
 
 import logging
+import os
 
 from typing import Callable, Any, Union
 from threading import Lock
@@ -24,7 +25,7 @@ class Pool:
         :param raise_errs: raise errors as they arise (vs. just logging)
         :param stop_early: stop after one successful execution.
         """
-        self.num_threads = num_threads
+        self.num_threads = self._configure_num_threads(num_threads)
         self.log_step = log_step
         self.raise_errs = raise_errs
         self.stop_early = stop_early
@@ -34,6 +35,11 @@ class Pool:
 
         # Whenever shared resources are edited this lock must be invoked
         self.lock = Lock()
+    
+    def _configure_num_threads(self, num_threads: int) -> int:
+        if os.environ["TSUTILS_DEBUG"]:
+            return 1
+        return num_threads
     
     @classmethod
     def configure(cls, application: str, settings: dict) -> Pool:
@@ -93,6 +99,7 @@ class Pool:
         out = []
         for (func, args, kwargs) in self.tasks:
             res, exc = self._handle_task(func, *args, **kwargs)
+            input()
             if self.stop_early and exc is None:
                 return res
             out.append(res)

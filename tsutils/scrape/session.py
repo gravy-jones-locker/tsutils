@@ -10,10 +10,8 @@ import logging
 
 from ..common.pool import Pool
 from ..common.exceptions import PoolError
-from .source import DriverSource, Source, BaseSource
+from .source import DriverSource, Source, BaseSource, Endpoint
 from .exceptions import SourceNotConfiguredError
-from .utils.field import Field
-from .utils.response import Response
 
 logger = logging.getLogger('tsutils')
 
@@ -53,46 +51,22 @@ class Session:
         stype.scraper_settings = scraper_settings
         return stype()
     
-    def scrape_url(self, url: str, fields: dict, **kwargs) -> dict:
+    def scrape_url(self, url: str, fields: dict=None, **kwargs) -> dict:
         """
-        Scrape a given url for the fields specified.
-        :param url: the url from which to extract the data.
-        :param fields: a dictionary of xpath/regex details for each field.
-        :param kwargs: bespoke request arguments for the scraping call.
-        :return: a dictionary with the values found for each field.
-        Field configuration dictionaries should look like this:
-        ```
-            {'author': {[  # Each field has multiple possible entries
-                {'xpath': '//div[@class="author"]/text()',
-                 'patt': '\w+\s\w+'},
-                {'xpath': '(//div[@class="info-pane"]/span)[2]/text()',
-                 'patt': 'author: \w+\s\w+'}
-                 ]},
-            'publication_name': ...
-            }
-        ```
+        Call the URL given and extract available field data.
+        :param url: the URL to call.
+        :param ad_fields: any additional fields to retrieve.
+        :param kwargs: bespoke request arguments.
+        :return: a dictionary of values found for each field.
         """
-        out = {}
         try:
-            resp = self.get(url, **kwargs)
-            if resp is None:
-                return out
-            for fname, fconf in fields.items():
-                field = Field(fname, fconf)
-                out[fname] = field.extract(resp)
-            return out
+            source = self._identify_request_source(url)
+            if fields is None:
+                fields = {}
+            return source.scrape_url(url, fields, **kwargs)
         except SourceNotConfiguredError:
             logger.info(f'Scraping {url} failed')
-            return out
-    
-    def get(self, url: str, **kwargs) -> Response:
-        """
-        Execute a get request using the configured scrapers.
-        :param url: the URL to which to point the get request.
-        :param kwargs: any bespoke request arguments to add.
-        :return: a Response object compiled from the server response.
-        """
-        return self._identify_request_source(url).scraper.get(url, **kwargs)
+            return {}
     
     def _identify_request_source(self, url: str) -> Source:
         for source in self.sources:
@@ -101,7 +75,7 @@ class Session:
             return source
         raise SourceNotConfiguredError(f'No source is configured for {url}')
     
-    def scrape_urls(self, urls: list, fields: Union[list, dict],
+    def scrape_urls(self, urls: list, fields: Union[list, dict]=None,
     num_threads: int=1) -> dict:
         """
         Iterate over urls and extract field data as per file config.
@@ -119,9 +93,34 @@ class Session:
         return {urls[i]: v for i, v in enumerate(values)}
     
     def _build_map_args(self, urls: list, fields: Union[list, dict]) -> list:
+        if fields is None:
+        # Compile a list of arguments (i.e. one URL) for each iteration
+            return [[x] for x in urls]
         if isinstance(fields, dict):
             fields = [fields for _ in range(len(urls))]
         return list(zip(urls, fields))
     
     def _running_driver(self) -> bool:
         return any([isinstance(x, DriverSource) for x in self.sources])
+    
+    def call_api(self, name: str, **kwargs) -> dict:
+        """
+        Call the given API with the arguments passed.
+        :name: the .name attribute of an Endpoint object.
+        :return: a dictionary of values found for each field.
+        """
+        try:
+            source = self._identify_api_source(name)
+            return source.call(**kwargs)
+        except SourceNotConfiguredError:
+            logger.info(f'Calling {name} failed')
+            return {}
+    
+    def _identify_api_source(self, name: str) -> Endpoint:
+        for source in self.sources:
+            if not isinstance(source, Endpoint):
+                continue
+            if source.__class__.__name__ != name:
+                continue
+            return source
+        raise SourceNotConfiguredError(f'No endpoint for {name} was found')

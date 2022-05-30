@@ -7,6 +7,5 @@ BAD_COOKIE_KEYS = {
 CAPTCHA_STRS = {
     'Please show you\'re not a robot',
     'verify you\'re not a robot',
-    'Please show you&#39;re not a robot',
-    'captcha'
+    'Please show you&#39;re not a robot'
 }

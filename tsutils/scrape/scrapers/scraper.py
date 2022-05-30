@@ -23,7 +23,7 @@ class Scraper:
         "proxy_file": None,
         "request_retries": 0,
         "request_retry_interval": 1,
-        "rotate_host": False,
+        "rotate_host": True,
         "headers": {}
     }
     class Decorators:
@@ -47,8 +47,8 @@ class Scraper:
             return inner
 
     def __init__(self, **settings) -> None:
-        self._hosts = Hosts(settings["proxy_file"])
         self._settings = update_defaults(self.defaults, settings)
+        self._hosts = Hosts(self._settings["proxy_file"])
     
     @Decorators.handle_response
     def get(self, url: str, *args, **kwargs) -> Response:
@@ -68,9 +68,12 @@ class Scraper:
         return resp
     
     def _handle_error(self, exc: Exception, iteration: int) -> None:
+        if 'tsutils' not in exc.__module__:
+            logger.error(exc.msg)
         if isinstance(exc, ResourceNotFoundError):
             raise exc
         if self._settings["rotate_host"]:
+            logger.info(f'Rotating host')
             self._rotate_host()
         if iteration == self._settings["request_retries"]:
             raise exc
