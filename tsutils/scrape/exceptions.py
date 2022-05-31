@@ -1,7 +1,8 @@
 from ..common.exceptions import *
 
 class ResourceNotFoundError(SkipIterationError):
-    pass
+    def __init__(self, url: str) -> None:
+        super().__init__(f'Nothing found at {url}')
 
 class PageLoadFailedError(NotificationError):
     pass

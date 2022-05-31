@@ -76,12 +76,9 @@ class Pool:
         self.tasks_completed = 0
         self.tasks_total = len(self.tasks)
 
-        try:
-            if self.num_threads == 1:
-                return self._do_sequential_execution()
-            return self._do_parallel_execution()
-        except KeyboardInterrupt:
-            self._terminate_threads()
+        if self.num_threads == 1:
+            return self._do_sequential_execution()
+        return self._do_parallel_execution()
     
     def _do_sequential_execution(self) -> Any:
         out = []
@@ -162,7 +159,8 @@ class Pool:
             raise exc
         
     def _log_error(self, exc: Exception) -> None:
-        logger.info(f'{exc} raised while processing item')
+        if exc is not None:  # True if has not been handled yet
+            logger.info(f'{exc} raised while processing item')
         logger.debug('See traceback', exc_info=1)
     
     def _log_progress(self) -> None:

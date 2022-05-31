@@ -137,7 +137,7 @@ class Chrome(uc.Chrome):
     
     def _get_main_request(self) -> Request:
         for request in self.requests:
-            if request.url == self.current_url:
+            if self.current_url.startswith(request.url):
                 return request
         raise NoRequestError(f'No requests could be made to {self.current_url}')
     
