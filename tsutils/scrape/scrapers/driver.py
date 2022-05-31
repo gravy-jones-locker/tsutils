@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 from typing import Callable
 
 from .scraper import Scraper
-from ..utils.response import Response as Response
+from ..models.response import Response as Response
 from ..utils.chrome import Chrome
 from ..exceptions import *
 

@@ -51,22 +51,27 @@ class Session:
         stype.scraper_settings = scraper_settings
         return stype()
     
-    def scrape_url(self, url: str, fields: dict=None, **kwargs) -> dict:
+    def scrape_url(self, url: str, fields: dict=None, values_only: bool=True,
+    **kwargs) -> Union[BaseSource.Result, dict]:
         """
         Call the URL given and extract available field data.
         :param url: the URL to call.
         :param ad_fields: any additional fields to retrieve.
+        :param values_only: toggle the output format.
         :param kwargs: bespoke request arguments.
-        :return: a dictionary of values found for each field.
+        :return: a dictionary of values or Result object as per values_only.
         """
         try:
             source = self._identify_request_source(url)
             if fields is None:
                 fields = {}
-            return source.scrape_url(url, fields, **kwargs)
+            res = source.scrape_url(url, fields, **kwargs)
+            if values_only:
+                res = res.values
+            return res
         except SourceNotConfiguredError:
             logger.info(f'Scraping {url} failed')
-            return {}
+            return {}, None
     
     def _identify_request_source(self, url: str) -> Source:
         for source in self.sources:
@@ -75,31 +80,36 @@ class Session:
             return source
         raise SourceNotConfiguredError(f'No source is configured for {url}')
     
-    def scrape_urls(self, urls: list, fields: Union[list, dict]=None,
-    num_threads: int=1) -> dict:
+    def scrape_urls(self, urls: list, fields: dict=None, values_only: bool=True,
+    index: bool=False, num_threads: int=1) -> list:
         """
-        Iterate over urls and extract field data as per file config.
+        Iterate over urls and return fields/responses as per file config.
         :param urls: a list of urls from which to scrape data.
-        :param fields: a broadcastable array/individual field config dict.
+        :param fields: an individual field config dict.
+        :param values_only: toggle value dictionary or Result object outputs.
+        :param index: toggle whether to return an indexed dictionary or list.
         :param num_threads: the number of threads (1 = no parallelisation).
         :return: a dictionary of results indexed by url.
         """
         if num_threads > 1 and self._running_driver():
             raise PoolError('Driver instances cannot be run in parallel')
-        with Pool(num_threads, log_step=num_threads+1) as pool:
-            values = pool.map(
+        with Pool(num_threads, log_step=num_threads+1, raise_errs=False) as pool:
+            out = pool.map(
                 self.scrape_url, 
-                self._build_map_args(urls, fields))
-        return {urls[i]: v for i, v in enumerate(values)}
+                [[x, fields, False] for x in urls])
+        return self._parse_mapped_output(out, urls, values_only, index)
     
-    def _build_map_args(self, urls: list, fields: Union[list, dict]) -> list:
-        if fields is None:
-        # Compile a list of arguments (i.e. one URL) for each iteration
-            return [[x] for x in urls]
-        if isinstance(fields, dict):
-            fields = [fields for _ in range(len(urls))]
-        return list(zip(urls, fields))
-    
+    def _parse_mapped_output(self, scraped: list, urls: list, 
+    values_only: bool, index: bool) -> Union[dict, list]:
+        out = []
+        for result in scraped:
+            if values_only:
+                result = result.values
+            out.append(result)
+        if not index:
+            return out
+        return {urls[i]: x for i, x in enumerate(out)}
+
     def _running_driver(self) -> bool:
         return any([isinstance(x, DriverSource) for x in self.sources])
     

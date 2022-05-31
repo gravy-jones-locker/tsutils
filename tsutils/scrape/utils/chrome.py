@@ -14,8 +14,8 @@ from selenium.common.exceptions import *
 
 from ...common.datautils import update_defaults
 from ...common.exceptions import NotificationError
-from .hosts import Host, LocalHost
-from .response import Response
+from ..models.hosts import Host, LocalHost
+from ..models.response import Response
 from .constants import IMG_EXTENSIONS
 from ... import ROOT_DIR
 

@@ -8,8 +8,8 @@ import time
 from typing import Callable
 
 from ...common.datautils import update_defaults
-from ..utils.response import Response
-from ..utils.hosts import Hosts
+from ..models.response import Response
+from ..models.hosts import Hosts
 from ..exceptions import *
 
 logger = logging.getLogger('tsutils')
@@ -21,7 +21,7 @@ class Scraper:
     """
     defaults = {
         "proxy_file": None,
-        "request_retries": 0,
+        "request_retries": 1,
         "request_retry_interval": 1,
         "rotate_host": True,
         "headers": {}

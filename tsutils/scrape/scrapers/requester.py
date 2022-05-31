@@ -11,8 +11,8 @@ import requests
 from typing import Callable
 
 from ..scrapers.scraper import Scraper
-from ..utils.response import Response
-from ..utils.hosts import Host
+from ..models.response import Response
+from ..models.hosts import Host
 from ...common.pool import Pool
 
 # Requester instances are shared between Sources wherever possible (i.e. when
@@ -42,10 +42,13 @@ class Requester(Scraper):
             """
             Execute the given request with appropriate threading.
             """
-            def inner(rqstr, *args, **kwargs) -> Response:
-                with Pool.configure('requests', rqstr._settings) as pool:
-                    for _ in range(rqstr._settings["prongs"]):
-                        pool.submit(func, rqstr, *args, **kwargs)
+            def inner(requester, *args, **kwargs) -> Response:
+                with requester._configure_pool() as pool:
+                    prongs = requester._settings["prongs"]
+                    if not requester._settings["spin_hosts"]:
+                        prongs = 1
+                    for _ in range(prongs):
+                        pool.submit(func, requester, *args, **kwargs)
                     return pool.execute()
             return inner
 
@@ -128,6 +131,13 @@ class Requester(Scraper):
         if self._settings["spin_hosts"]:
             return
         self._host = next(self._hosts)
+    
+    def _configure_pool(self) -> Pool:
+        return Pool(
+            num_threads=self._settings["num_threads"],
+            stop_early=True,
+            raise_errs=False,
+            log_step=0)
 
 class APIRequester(Requester):
     """

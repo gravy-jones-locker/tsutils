@@ -5,8 +5,10 @@ ROOT_DIR = str(Path(__file__).absolute().parents[0])
 import sys
 import os
 
-if str('--debug' in sys.argv) or 'pdb' in sys.modules.keys():
+if '--debug' in sys.argv or 'pdb' in sys.modules.keys():
     os.environ["TSUTILS_DEBUG"] = 'True'
+else:
+    os.environ["TSUTILS_DEBUG"] = 'False'
 
 from tsutils.common.io import load_json
 
@@ -24,4 +26,8 @@ import os
 
 if os.environ.get('TSUTILS_DEBUG') == 'True':
     import logging
-    logging.getLogger('tsutils').setLevel('DEBUG')
+    logger = logging.getLogger('tsutils')
+    for handler in logger.handlers:
+        if handler.name != 'console':
+            continue
+        handler.setLevel('DEBUG')

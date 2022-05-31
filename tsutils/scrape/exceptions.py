@@ -23,3 +23,6 @@ class WrongFieldTypeError(SkipIterationError):
 
 class LiveDriverError(CriticalError):
     pass
+
+class StopScrapeError(StopPoolExecutionError):
+    pass

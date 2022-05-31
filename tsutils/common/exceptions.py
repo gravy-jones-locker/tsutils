@@ -17,6 +17,9 @@ class CriticalError(NotificationError):
 class SkipIterationError(NotificationError):
     suffix = '... skipping'
 
+class StopPoolExecutionError(NotificationError):
+    suffix = ' - stopping execution'
+
 class QuietError(Exception):
     def __init__(self, *msg):
         logger.debug(''.join(msg))

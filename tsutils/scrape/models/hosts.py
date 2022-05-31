@@ -5,6 +5,7 @@ supervision of avoidable scraping failures.
 from __future__ import annotations
 
 import os
+import random
 import logging
 
 from typing import Generator, Union
@@ -42,7 +43,9 @@ class Hosts:
         return ['localhost']
     
     def _load_user_agents(self) -> list:
-        return load_csv(UAS_FPATH, flat=True)
+        out = load_csv(UAS_FPATH, flat=True)
+        random.shuffle(out)
+        return out
 
 class Host:
     """
