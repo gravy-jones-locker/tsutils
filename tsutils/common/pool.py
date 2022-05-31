@@ -12,7 +12,7 @@ from threading import Lock
 from concurrent.futures import Executor, ThreadPoolExecutor, Future
 from concurrent.futures import wait, FIRST_COMPLETED
 
-from ..common.exceptions import StopPoolExecutionError
+from ..common.exceptions import NotificationError, StopPoolExecutionError
 
 logger = logging.getLogger('tsutils')
 
@@ -115,9 +115,9 @@ class Pool:
         try:
             return func(*args, **kwargs), None
         except Exception as exc:
-            self._log_error(exc)
             if self.raise_errs or isinstance(exc, KeyboardInterrupt):
                 raise exc
+            self._log_error(exc)
             return None, exc
         finally:  # Add done counter and log progress in any case
             with self.lock:
@@ -159,8 +159,8 @@ class Pool:
             raise exc
         
     def _log_error(self, exc: Exception) -> None:
-        if exc is not None:  # True if has not been handled yet
-            logger.info(f'{exc} raised while processing item')
+        if not isinstance(NotificationError):
+            logger.error(exc)
         logger.debug('See traceback', exc_info=1)
     
     def _log_progress(self) -> None:

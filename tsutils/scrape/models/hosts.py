@@ -22,10 +22,11 @@ class Hosts:
     """
     The Host instances are collected into an infinite loop for easy rotation.
     """
-    def __init__(self, proxy_file: Union[str, None]) -> None:
+    def __init__(self, proxy_file: Union[str, None], 
+    select_proxy: bool) -> None:
         self._cycle = cycle(
             self._compile_hosts(
-                self._load_proxies(proxy_file),
+                self._load_proxies(proxy_file, select_proxy),
                 self._load_user_agents()))
     
     def __next__(self) -> Host:
@@ -35,12 +36,20 @@ class Hosts:
         for user_agent, proxy in product(user_agents, proxies):
             yield Host._load(proxy, user_agent)
     
-    def _load_proxies(self, proxy_file: Union[str, None]) -> list:
+    def _load_proxies(self, proxy_file: Union[str, None], 
+    select_proxy: bool) -> list:
         if proxy_file is not None:
             if os.path.isfile(proxy_file):
-                return load_csv(proxy_file, flat=True)
+                return self._read_proxy_file(proxy_file, select_proxy)
             logger.error(f'Proxy file at {proxy_file} not found. Ignoring')
         return ['localhost']
+    
+    def _read_proxy_file(self, proxy_file: Union[str, None], 
+    select_proxy: bool) -> list:
+        proxies = load_csv(proxy_file, flat=True)
+        if select_proxy:
+            proxies = proxies[:1]
+        return proxies
     
     def _load_user_agents(self) -> list:
         out = load_csv(UAS_FPATH, flat=True)

@@ -21,6 +21,7 @@ class Scraper:
     """
     defaults = {
         "proxy_file": None,
+        "select_proxy": False,
         "request_retries": 1,
         "request_retry_interval": 1,
         "rotate_host": True,
@@ -48,7 +49,9 @@ class Scraper:
 
     def __init__(self, **settings) -> None:
         self._settings = update_defaults(self.defaults, settings)
-        self._hosts = Hosts(self._settings["proxy_file"])
+        self._hosts = Hosts(
+            self._settings["proxy_file"], 
+            self._settings["select_proxy"])
     
     @Decorators.handle_response
     def get(self, url: str, *args, **kwargs) -> Response:
@@ -73,7 +76,7 @@ class Scraper:
         if isinstance(exc, ResourceNotFoundError):
             raise exc
         if self._settings["rotate_host"]:
-            logger.info(f'Rotating host')
+            logger.info(f'{exc} raised - Rotating host')
             self._rotate_host()
         if iteration == self._settings["request_retries"]:
             raise exc
