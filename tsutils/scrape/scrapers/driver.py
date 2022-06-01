@@ -76,7 +76,7 @@ class Driver(Scraper):
         if len(_instances) == 0:
             _instances.append(cls(**settings))
         driver = _instances[0]
-        if settings != driver._settings:
+        if not all([v == driver._settings[k] for k, v in settings.items()]):
             raise LiveDriverError('Cannot start mismatched Driver instance')
         return driver
 
@@ -103,6 +103,9 @@ class Driver(Scraper):
         Send quit signal to underlying Chrome instance.
         """
         self._chrome.quit()
+        global _instances
+
+        _instances.remove(self)
     
     def reset_profile(self) -> None:
         """

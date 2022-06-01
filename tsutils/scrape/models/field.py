@@ -5,6 +5,12 @@ from ...common.langutils import get_re_group
 from .response import Response
 from ..exceptions import WrongFieldTypeError
 
+DEFAULTS = {
+    "patt": None,
+    "case_sensitive": False,
+    "join": False
+    }
+
 class Field:
     """
     Interface for extracting field data from Response objects. 
@@ -66,9 +72,10 @@ class HTMLField(Field):
     def _compile_sub_conf(self, sub_conf: dict) -> dict:
         if not isinstance(sub_conf, dict):
             sub_conf = {"xpath": sub_conf}
-        return {**{"patt": None, "case_sensitive": False}, **sub_conf}
+        return {**DEFAULTS, **sub_conf}
     
-    def _process_sub_conf(self, sub_conf: dict, data: Response) -> list:
+    def _process_sub_conf(self, sub_conf: dict, data: Response) -> Union[str, 
+    list]:
         out = []
         vals = data.xpath(sub_conf["xpath"])
         for val in vals:
@@ -78,6 +85,8 @@ class HTMLField(Field):
                 val = self._parse_val(val, sub_conf)
             if val is not None:
                 out.append(val)
+        if sub_conf["join"]:
+            out = ' '.join(out)
         return out
 
     def _parse_val(self, val: str, sub_conf: dict) -> str:

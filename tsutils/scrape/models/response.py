@@ -11,7 +11,7 @@ from seleniumwire.request import Response as SWResponse
 from seleniumwire.utils import decode
 from lxml import html
 
-from ..utils.constants import BAD_COOKIE_KEYS, CAPTCHA_STRS
+from ..utils.constants import BAD_COOKIE_KEYS
 
 class Response(RequestsResponse):
     """
@@ -21,7 +21,6 @@ class Response(RequestsResponse):
     AD_ATTRS = [
         '_msg',
         '_dom',
-        '_captchaed'
     ]
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
@@ -47,21 +46,6 @@ class Response(RequestsResponse):
             self._msg = f'{self.status_code} raised requesting {self.url}'
         return self._msg
     
-    @property
-    def captchaed(self) -> bool:
-        """
-        Return True if the response contains a captcha.
-        :return: True if there are captcha elements in the page.
-        """
-        if self._captchaed is False:
-            self._captchaed = self._detect_captcha()
-        return self._captchaed
-
-    def _detect_captcha(self) -> bool:
-        if any([x in self.text for x in CAPTCHA_STRS]):
-            return True
-        return False
-
     @classmethod
     def _from_chrome(cls, request: SWRequest, cookies: list) -> Response:
         return cls._configure_from_state({

@@ -5,12 +5,17 @@ configurations.
 from __future__ import annotations
 
 import re
+import logging
+
+from bdb import BdbQuit
 
 from ..common.datautils import update_defaults
 from .scrapers import Requester, Driver, Scraper, APIRequester
 from .exceptions import StopScrapeError
 from .models.field import HTMLField, APIField
 from .models.response import Response
+
+logger = logging.getLogger('tsutils')
 
 class BaseSource:
     """
@@ -66,12 +71,7 @@ class BaseSource:
         :param kwargs: bespoke request arguments.
         :return: a Result object compiled from the scrape.
         """
-        values = {}
-        resp = self.scraper.get(url, **kwargs)
-        if resp is not None:
-            for field in [*self.fields, *self._compile_fields(ad_fields)]:
-                values[field.name] = field.extract(resp)
-        return self._execute_callback(self.Result(values, resp))
+        return self._parse_response(self.scraper.get(url, **kwargs), ad_fields)
 
     @property
     def scraper(self) -> Scraper:
@@ -80,6 +80,14 @@ class BaseSource:
                 **self.scraper_settings)
         return self._scraper
     
+    def _parse_response(self, resp: Response, ad_fields: dict) -> Result:
+        values = {}
+        if resp is not None:
+            for field in [*self.fields, *self._compile_fields(ad_fields)]:
+                values[field.name] = field.extract(resp)
+        res = self.Result(values, resp)
+        return self._execute_callback(res)
+
     def _execute_callback(self, result: Result) -> Result:
         try:
             result = self.done_callback(result)
@@ -185,8 +193,71 @@ class Endpoint(BaseSource):
             url = url.format(**{key: kwargs.pop(key)})
         return self.scrape_url(url, **kwargs)
 
-class DualSource:
+class DefensiveSource(Source):
     """
-    DualSource objects execute Driver-based scraping if Requester fails.
+    DefensiveSource objects initiate a session using Selenium interfaces and 
+    subsequently attempt to scrape via a Requester object.
+
+    Limited retries aim to optimise request/output payoff.
     """
-    pass  # TODO implement - or not?
+    _live_session = False
+
+    _driver = False
+
+    guided_initialisation = False
+
+    def __init__(self) -> None:
+        super().__init__()
+
+        self.scraper_settings.update(  # These are needed to hold a session open
+            {"rotate_host": False,
+             "spin_hosts": False,
+             "session": True,
+             })
+
+    def scrape_url(self, url: str, ad_fields: dict, 
+    **kwargs) -> BaseSource.Result:
+        """
+        Execute normal scraping flow with appropriate scraper routing.
+        """
+        if self._live_session is False:
+            return self._configure_session(url)
+        
+        # Pass the session cookies in the scraping request
+        kwargs["cookies"] = self._live_session["cookies"]
+        result = super().scrape_url(url, ad_fields, **kwargs)
+
+        if result.resp is not None:  # True if the request was successful
+            return result
+        return self._configure_session(url)
+
+    def _configure_session(self, url: str) -> None:
+        logger.info('Configuring defensive HTML source session')
+        try:
+            resp = self.driver.get(url, wait_xpath='//h1[@class="citation__title"]')
+            self._live_session = {
+                "cookies": dict(resp.cookies),
+                "host": self.driver._chrome.host,
+            }
+            self._restart_scraper()
+            return self._parse_response(resp, {})
+        except Exception as exc:
+            if isinstance(exc, (KeyboardInterrupt, BdbQuit)):
+                raise exc
+            logger.error('Driver initialisation failed')
+            return self._parse_response(None, {})
+    
+    @property
+    def driver(self) -> Driver:
+        if self._driver is False:
+            self._driver = Driver.get_or_create(
+                ignore_scripts=True,
+                request_retries=2,
+                post_load_wait=5,
+                proxy_file=self.proxy_file,
+                headless=not self.guided_initialisation)
+        return self._driver
+
+    def _restart_scraper(self) -> None:
+        self._scraper = Requester(**self.scraper_settings)
+        self._scraper._host = self._live_session["host"]

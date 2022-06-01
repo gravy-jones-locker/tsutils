@@ -52,7 +52,7 @@ class Chrome(uc.Chrome):
         """
         self._settings = update_defaults(self.defaults, settings)
         self._init_driver()
-        self._configure_host(self._settings["host"])
+        self._configure_host(settings.get('host', self._settings["host"]))
         self.request_interceptor = self._intercept_requests
 
     def _init_driver(self) -> None:

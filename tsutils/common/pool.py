@@ -8,11 +8,12 @@ import logging
 import os
 
 from typing import Callable, Any, Union
+from bdb import BdbQuit
 from threading import Lock
-from concurrent.futures import Executor, ThreadPoolExecutor, Future
+from concurrent.futures import Executor, ThreadPoolExecutor
 from concurrent.futures import wait, FIRST_COMPLETED
 
-from ..common.exceptions import NotificationError, StopPoolExecutionError
+from ..common.exceptions import StopPoolExecutionError
 
 logger = logging.getLogger('tsutils')
 
@@ -83,39 +84,20 @@ class Pool:
     def _do_sequential_execution(self) -> Any:
         out = []
         for (func, args, kwargs) in self.tasks:
-            res, exc = self._handle_task(func, *args, **kwargs)
-            if exc is None and self.stop_early:
-                return res
-            out.append(res)
-            if self._check_for_poolstopper(res):
+            res, minor_exc = self._handle_task(func, *args, **kwargs)
+            if self.stop_early and minor_exc is None:
+                return res  # True if there were no errors at all
+            if not self.stop_early:
+                out.append(res)
+            if self._check_for_poolstopper([res]):
                 break
-        if self.stop_early:  # True if all attempts failed
-            raise exc
-        return out
-    
-    def _do_parallel_execution(self) -> Any:
-        with ThreadPoolExecutor(self.num_threads) as executor:
-            futures = self._configure_threads(executor)
-            while futures:
-                out, futures = self._parse_completing_threads(futures)
-                if self._stop_execution(out):
-                    self._terminate_threads(futures)
-                    break
-            return out
-
-    def _configure_threads(self, executor: Executor) -> list:
-        out = []
-        for (func, args, kwargs) in self.tasks:
-            f = executor.submit(self._handle_task, func, *args, **kwargs)
-            f.add_done_callback(self._process_done_thread)
-            out.append(f)
-        return out
+        return out  # True when all the tasks are completed
 
     def _handle_task(self, func: Callable, *args, **kwargs) -> tuple:
         try:
             return func(*args, **kwargs), None
         except Exception as exc:
-            if self.raise_errs or isinstance(exc, KeyboardInterrupt):
+            if self._is_stopping_exception(exc):
                 raise exc
             self._log_error(exc)
             return None, exc
@@ -123,45 +105,67 @@ class Pool:
             with self.lock:
                 self.tasks_completed += 1
             self._log_progress()
-    
-    def _parse_completing_threads(self, futures: list) -> Any:
-        done, futures = wait(futures, return_when=FIRST_COMPLETED)
-        if self.stop_early:
-            for f in done:
-                if f.exception() is not None:
-                    continue
-                return f.result()[0], futures
-            return None, futures
-        return [x.result()[0] for x in done], futures
-    
-    def _stop_execution(self, out: Any) -> bool:
-        if self.stop_early:
-            return out is not None
-        for res in out:
-            if self._check_for_poolstopper(res):
+
+    def _is_stopping_exception(self, exc) -> bool:
+        if self.raise_errs:
+            return True
+        if self.stop_early and self.tasks_completed + 1 == self.tasks_total:
+            return True
+        if isinstance(exc, KeyboardInterrupt):
+            return True
+        if isinstance(exc, BdbQuit):
+            return True
+        return False
+
+    def _check_for_poolstopper(self, results: list) -> bool:
+        for res in results:
+            if isinstance(getattr(res, 'exc', None), StopPoolExecutionError):
                 return True
         return False
-    
-    def _check_for_poolstopper(self, res: Any) -> bool:
-        return isinstance(getattr(res, 'exc', None), StopPoolExecutionError)
 
+    def _do_parallel_execution(self) -> Any:
+        with ThreadPoolExecutor(self.num_threads) as executor:
+            futures = self._configure_threads(executor)
+            try:
+                out = []
+                while futures:
+                    done, futures = self._parse_completing_threads(futures)
+                    if self.stop_early and done[1] is None:
+                        return done[0]  # Returns result of a successful thread
+                    if not self.stop_early and self._check_for_poolstopper(out):
+                        break
+                    out.extend(done)
+                return out  # Returns a list of outputs
+            finally:
+                self._terminate_threads(futures)
+
+    def _configure_threads(self, executor: Executor) -> list:
+        out = []
+        for (func, args, kwargs) in self.tasks:
+            f = executor.submit(self._handle_task, func, *args, **kwargs)
+            out.append(f)
+        return out
+
+    def _parse_completing_threads(self, futures: list) -> Any:
+        done, futures = wait(futures, return_when=FIRST_COMPLETED)
+        for f in done:
+            if f.exception() is not None:
+                raise f.exception()  # Only True if a **stopping* exception
+            res, minor_exc = f.result()
+            if self.stop_early and minor_exc is None:
+                break  # True if a thread succesfully executed
+        if self.stop_early:
+            return (res, minor_exc), futures
+        return [x.result()[0] for x in done], futures
+    
     def _terminate_threads(self, futures: list) -> None:
         for waiting in futures:
             waiting.cancel()
-    
-    def _process_done_thread(self, future: Future):
-        exc = future.exception()
-        if exc is None:
-            return
-        if self.raise_errs:
-            raise exc
-        if self.stop_early and self.tasks_completed == self.tasks_total:
-            raise exc
-        
-    def _log_error(self, exc: Exception) -> None:
-        if not isinstance(NotificationError):
-            logger.error(exc)
-        logger.debug('See traceback', exc_info=1)
+
+    def _log_error(self, exc) -> None:
+        if not self.stop_early and not self.raise_errs:
+            logger.info(f'{exc} raised and ignored while processing item')
+            logger.debug('Check traceback', exc_info=1)
     
     def _log_progress(self) -> None:
         if self.log_step == 0:
