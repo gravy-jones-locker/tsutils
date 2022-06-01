@@ -121,6 +121,7 @@ class Driver(Scraper):
             time.sleep(load_secs)
             if self._verify_loaded(wait_xpath):
                 return
+            logger.debug(f'Xpath ({wait_xpath}) not found')
             attempts += 1
         raise PageLoadFailedError
 

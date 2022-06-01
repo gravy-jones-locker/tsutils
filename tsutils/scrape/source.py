@@ -252,7 +252,7 @@ class DefensiveSource(Source):
         if self._driver is False:
             self._driver = Driver.get_or_create(
                 ignore_scripts=True,
-                request_retries=2,
+                request_retries=5,
                 post_load_wait=5,
                 proxy_file=self.proxy_file,
                 headless=not self.guided_initialisation)
