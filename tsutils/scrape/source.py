@@ -253,6 +253,7 @@ class DefensiveSource(Source):
             self._driver = Driver.get_or_create(
                 ignore_scripts=True,
                 request_retries=5,
+                incognito=True,
                 post_load_wait=5,
                 proxy_file=self.proxy_file,
                 headless=not self.guided_initialisation)
