@@ -211,6 +211,7 @@ class DefensiveSource(Source):
 
         self.scraper_settings.update(  # These are needed to hold a session open
             {"rotate_host": False,
+             "request_retries": 5,
              "spin_hosts": False,
              "session": True,
              })
@@ -225,11 +226,10 @@ class DefensiveSource(Source):
         
         # Pass the session cookies in the scraping request
         kwargs["cookies"] = self._live_session["cookies"]
-        result = super().scrape_url(url, ad_fields, **kwargs)
-
-        if result.resp is not None:  # True if the request was successful
-            return result
-        return self._configure_session(url)
+        try:
+            return super().scrape_url(url, ad_fields, **kwargs)
+        except:
+            return self._configure_session(url)
 
     def _configure_session(self, url: str) -> None:
         logger.info('Configuring defensive HTML source session')

@@ -164,7 +164,7 @@ class Pool:
 
     def _log_error(self, exc) -> None:
         if not self.stop_early and not self.raise_errs:
-            logger.info(f'{exc} raised and ignored while processing item')
+            logger.info(f'{exc} raised while processing item')
             logger.debug('Check traceback', exc_info=1)
     
     def _log_progress(self) -> None:
