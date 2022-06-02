@@ -245,6 +245,7 @@ class DefensiveSource(Source):
             if isinstance(exc, (KeyboardInterrupt, BdbQuit)):
                 raise exc
             logger.error('Driver initialisation failed')
+            logger.debug('', exc_info=1)
             return self._parse_response(None, {})
     
     @property

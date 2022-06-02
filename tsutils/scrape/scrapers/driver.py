@@ -105,7 +105,8 @@ class Driver(Scraper):
         self._chrome.quit()
         global _instances
 
-        _instances.remove(self)
+        if self in _instances:
+            _instances.remove(self)
     
     def reset_profile(self) -> None:
         """
