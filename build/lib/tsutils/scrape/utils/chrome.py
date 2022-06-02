@@ -14,8 +14,9 @@ from selenium.common.exceptions import *
 
 from ...common.datautils import update_defaults
 from ...common.exceptions import NotificationError
-from .hosts import Host, LocalHost
-from .response import Response
+from ..models.hosts import Host, LocalHost
+from ..models.response import Response
+from .constants import IMG_EXTENSIONS
 from ... import ROOT_DIR
 
 DATA_DIR = f'{ROOT_DIR}/input/data/chrome'
@@ -34,12 +35,14 @@ class Chrome(uc.Chrome):
         "incognito": False,
         "page_load_timeout": 15,
         "host": None,
+        "ignore_images": True,
+        "ignore_scripts": False,
         "load_args": [
             '--log-level=2',
             '--no-first-run',
             '--no-service-autorun',
             '--disable-dev-shm-usage',
-            '--window-size=1920,1080'
+            '--window-size=1280,1024'
             ]}
 
     def __init__(self, **settings) -> None:
@@ -49,7 +52,7 @@ class Chrome(uc.Chrome):
         """
         self._settings = update_defaults(self.defaults, settings)
         self._init_driver()
-        self._configure_host(self._settings["host"])
+        self._configure_host(settings.get('host', self._settings["host"]))
         self.request_interceptor = self._intercept_requests
 
     def _init_driver(self) -> None:
@@ -73,11 +76,20 @@ class Chrome(uc.Chrome):
         return options
 
     def _intercept_requests(self, request: Request) -> None:
-        if request.path.endswith(('.png', '.jpg', '.gif')):
+        if self._ban_request(request):
             request.abort()
         elif self.host.user_agent is not None:
             del request.headers["User-Agent"]
             request.headers["User-Agent"] = self.host.user_agent
+    
+    def _ban_request(self, request: Request) -> bool:
+        if self._settings["ignore_images"]:
+            if request.path.endswith(tuple(IMG_EXTENSIONS)):
+                return True
+        if self._settings["ignore_scripts"]:
+            if request.path.endswith('js'):
+                return True
+        return False
     
     def click_xpath(self, xpath: str) -> None:
         """
@@ -125,7 +137,7 @@ class Chrome(uc.Chrome):
     
     def _get_main_request(self) -> Request:
         for request in self.requests:
-            if request.url == self.current_url:
+            if self.current_url.startswith(request.url):
                 return request
         raise NoRequestError(f'No requests could be made to {self.current_url}')
     

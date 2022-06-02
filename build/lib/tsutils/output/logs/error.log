@@ -345,3 +345,499 @@
 [2022-05-30 11:31:48,253] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
   (Session info: headless chrome=102.0.5005.49)
 [2022-05-30 11:48:54,987] ERROR: Driver instances cannot be run in parallel... CRITICAL - QUITTING
+[2022-05-30 14:03:11,062] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 14:32:31,604] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 14:32:32,687] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 14:32:33,767] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 17:22:25,378] ERROR: No source is configured for https://www.amazon.com/s?k=%22Stanford+University+Press%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,379] ERROR: No source is configured for https://www.amazon.com/s?k=%22professor+of%22&i=stripbooks&s=daterank&Adv-Srch-Books[…]d-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,380] ERROR: No source is configured for https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,380] ERROR: No source is configured for https://www.amazon.com/s?k=%22economic%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,381] ERROR: No source is configured for https://www.amazon.com/s?k=%22history%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,381] ERROR: No source is configured for https://www.amazon.com/s?k=%22technology%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,382] ERROR: No source is configured for https://www.amazon.com/s?k=%22law%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,382] ERROR: No source is configured for https://www.amazon.com/s?k=%22digital%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-30 17:22:25,383] ERROR: No source is configured for https://www.amazon.com/s?k=%22policy%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-31 10:45:46,620] ERROR: No further items available - stopping execution
+[2022-05-31 10:47:05,260] ERROR: No further items available - stopping execution
+[2022-05-31 10:48:05,075] ERROR: No further items available - stopping execution
+[2022-05-31 10:50:13,756] ERROR: No further items available - stopping execution
+[2022-05-31 10:52:33,590] ERROR: No further items available - stopping execution
+[2022-05-31 10:54:54,122] ERROR: No further items available - stopping execution
+[2022-05-31 10:56:00,927] ERROR: No further items available - stopping execution
+[2022-05-31 10:59:07,230] ERROR: No further items available - stopping execution
+[2022-05-31 11:00:25,260] ERROR: No further items available - stopping execution
+[2022-05-31 11:14:22,248] ERROR: No further items available - stopping execution
+[2022-05-31 12:21:48,206] ERROR: No further items available - stopping execution
+[2022-05-31 12:22:31,193] ERROR: No further items available - stopping execution
+[2022-05-31 12:24:13,834] ERROR: No further items available - stopping execution
+[2022-05-31 12:26:04,703] ERROR: No further items available - stopping execution
+[2022-05-31 12:26:59,192] ERROR: No further items available - stopping execution
+[2022-05-31 12:27:45,345] ERROR: No further items available - stopping execution
+[2022-05-31 12:28:15,637] ERROR: No further items available - stopping execution
+[2022-05-31 12:53:31,704] ERROR: No further items available - stopping execution
+[2022-05-31 12:53:54,001] ERROR: No further items available - stopping execution
+[2022-05-31 12:56:49,058] ERROR: No further items available - stopping execution
+[2022-05-31 13:02:45,539] ERROR: No further items available - stopping execution
+[2022-05-31 13:03:11,396] ERROR: No further items available - stopping execution
+[2022-05-31 14:51:02,256] ERROR: No further items available - stopping execution
+[2022-05-31 14:51:17,646] ERROR: No further items available - stopping execution
+[2022-05-31 16:14:34,310] ERROR: No source is configured for https://www.amazon.com/s?k=%22professor+of%22&i=stripbooks&s=daterank&Adv-Srch-Books[…]d-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-31 16:20:21,672] ERROR: No further results available - stopping execution
+[2022-05-31 16:20:23,783] ERROR: No further results available - stopping execution
+[2022-05-31 16:21:11,447] ERROR: No further results available - stopping execution
+[2022-05-31 16:21:13,549] ERROR: No further results available - stopping execution
+[2022-05-31 16:32:23,969] ERROR:     No further results available - stopping execution
+[2022-05-31 16:41:26,155] ERROR:     No further results available - stopping execution
+[2022-05-31 16:44:43,898]     ERROR: No further results available - stopping execution
+[2022-05-31 16:44:45,937]     ERROR: No further results available - stopping execution
+[2022-05-31 16:47:36,230]     ERROR No further results available - stopping execution
+[2022-05-31 16:47:38,473]     ERROR No further results available - stopping execution
+[2022-05-31 16:57:30,602]     ERROR No further results available - stopping execution
+[2022-05-31 16:57:32,824]     ERROR No further results available - stopping execution
+[2022-05-31 16:52:07,254]     ERROR 'BdbQuit' object has no attribute 'msg'
+[2022-05-31 16:52:07,265]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,294]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,305]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,317]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,325]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,338]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,364]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,368]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,374]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,381]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,402]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,436]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,458]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,476]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,492]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,507]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,510]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,518]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,533]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,539]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,544]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,560]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,588]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,610]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,623]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,635]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,642]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,650]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-05-31 16:52:07,656]     ERROR 'MaxRetryError' object has no attribute 'msg'
+[2022-06-01 10:10:41,318]     ERROR Detected a Cloudflare version 2 challenge, This feature is not available in the opensource (free) version.
+[2022-06-01 10:10:42,445]     ERROR Detected a Cloudflare version 2 challenge, This feature is not available in the opensource (free) version.
+[2022-06-01 12:33:52,463]     ERROR No further results available - stopping execution
+[2022-06-01 12:34:02,119]     ERROR No further results available - stopping execution
+[2022-06-01 12:35:27,414]     ERROR No further results available - stopping execution
+[2022-06-01 12:35:30,778]     ERROR No further results available - stopping execution
+[2022-06-01 12:39:22,644]     ERROR No further results available - stopping execution
+[2022-06-01 12:39:25,761]     ERROR No further results available - stopping execution
+[2022-06-01 12:42:53,065]     ERROR No further results available - stopping execution
+[2022-06-01 12:49:03,134]     ERROR No further results available - stopping execution
+[2022-06-01 12:49:06,857]     ERROR No further results available - stopping execution
+[2022-06-01 12:49:54,352]     ERROR No further results available - stopping execution
+[2022-06-01 12:49:59,970]     ERROR No further results available - stopping execution
+[2022-06-01 12:50:31,007]     ERROR No further results available - stopping execution
+[2022-06-01 12:50:36,356]     ERROR No further results available - stopping execution
+[2022-06-01 13:00:33,022]     ERROR No further results available - stopping execution
+[2022-06-01 13:00:47,382]     ERROR No further results available - stopping execution
+[2022-06-01 13:03:27,704]     ERROR No further results available - stopping execution
+[2022-06-01 13:03:41,117]     ERROR No further results available - stopping execution
+[2022-06-01 13:05:45,511]     ERROR No further results available - stopping execution
+[2022-06-01 13:05:51,973]     ERROR No further results available - stopping execution
+[2022-06-01 13:13:33,798]     ERROR No further results available - stopping execution
+[2022-06-01 13:13:40,780]     ERROR No further results available - stopping execution
+[2022-06-01 13:14:34,091]     ERROR No further results available - stopping execution
+[2022-06-01 13:14:38,702]     ERROR No further results available - stopping execution
+[2022-06-01 13:15:44,791]     ERROR No further results available - stopping execution
+[2022-06-01 13:15:53,066]     ERROR No further results available - stopping execution
+[2022-06-01 13:17:02,694]     ERROR No further results available - stopping execution
+[2022-06-01 13:17:08,384]     ERROR No further results available - stopping execution
+[2022-06-01 13:18:37,581]     ERROR No further results available - stopping execution
+[2022-06-01 13:19:04,659]     ERROR No further results available - stopping execution
+[2022-06-01 13:20:07,757]     ERROR No further results available - stopping execution
+[2022-06-01 13:20:52,962]     ERROR No further results available - stopping execution
+[2022-06-01 13:22:28,066]     ERROR No further results available - stopping execution
+[2022-06-01 13:25:17,330]     ERROR No further results available - stopping execution
+[2022-06-01 13:25:30,144]     ERROR No further results available - stopping execution
+[2022-06-01 13:30:24,056]     ERROR No further results available - stopping execution
+[2022-06-01 13:30:29,921]     ERROR No further results available - stopping execution
+[2022-06-01 13:30:48,881]     ERROR No further results available - stopping execution
+[2022-06-01 13:31:15,958]     ERROR No further results available - stopping execution
+[2022-06-01 13:31:34,089]     ERROR No further results available - stopping execution
+[2022-06-01 13:31:40,907]     ERROR No further results available - stopping execution
+[2022-06-01 13:36:09,616]     ERROR No further results available - stopping execution
+[2022-06-01 13:36:13,855]     ERROR No further results available - stopping execution
+[2022-06-01 13:48:16,718]     ERROR No further results available - stopping execution
+[2022-06-01 13:48:31,131]     ERROR No further results available - stopping execution
+[2022-06-01 13:50:12,127]     ERROR No further results available - stopping execution
+[2022-06-01 13:50:27,275]     ERROR No further results available - stopping execution
+[2022-06-01 13:54:51,777]     ERROR No further results available - stopping execution
+[2022-06-01 13:55:18,638]     ERROR No further results available - stopping execution
+[2022-06-01 13:56:44,740]     ERROR No further results available - stopping execution
+[2022-06-01 13:57:17,093]     ERROR No further results available - stopping execution
+[2022-06-01 14:13:58,032]     ERROR No further results available - stopping execution
+[2022-06-01 14:15:27,370]     ERROR No further results available - stopping execution
+[2022-06-01 14:15:30,952]     ERROR No further results available - stopping execution
+[2022-06-01 14:17:36,042]     ERROR No further results available - stopping execution
+[2022-06-01 14:17:54,446]     ERROR No further results available - stopping execution
+[2022-06-01 14:18:45,997]     ERROR No further results available - stopping execution
+[2022-06-01 14:19:05,038]     ERROR No further results available - stopping execution
+[2022-06-01 14:27:23,984]     ERROR No further results available - stopping execution
+[2022-06-01 14:27:26,076]     ERROR No further results available - stopping execution
+[2022-06-01 14:27:57,846]     ERROR No further results available - stopping execution
+[2022-06-01 14:28:00,253]     ERROR No further results available - stopping execution
+[2022-06-01 14:37:31,732]     ERROR No further results available - stopping execution
+[2022-06-01 14:37:34,977]     ERROR No further results available - stopping execution
+[2022-06-01 14:38:41,120]     ERROR No further results available - stopping execution
+[2022-06-01 14:38:44,781]     ERROR No further results available - stopping execution
+[2022-06-01 14:39:05,829]     ERROR No further results available - stopping execution
+[2022-06-01 14:39:09,361]     ERROR No further results available - stopping execution
+[2022-06-01 16:56:37,598]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:56:37,605]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:56:37,606]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:56:37,606]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:56:37,607]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:04,609]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:04,610]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:04,611]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:04,612]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:04,613]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:35,436]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:35,437]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:35,438]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:35,439]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:58:35,440]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:59:14,761]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:59:14,763]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:59:14,765]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:59:14,766]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 16:59:14,767]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:01:22,912]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:01:22,915]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:01:22,919]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:01:22,923]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:01:22,935]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:02:42,546]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:02:42,547]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:02:42,547]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:02:42,548]     ERROR Cannot start mismatched Driver instance... CRITICAL - QUITTING
+[2022-06-01 17:14:58,811]     ERROR Driver initialisation failed - 'Chrome' object has no attribute '_host'
+[2022-06-01 19:44:12,168]     ERROR Driver initialisation failed
+[2022-06-01 19:45:06,633]     ERROR Driver initialisation failed
+[2022-06-01 19:45:13,790]     ERROR Driver initialisation failed
+[2022-06-01 19:46:59,889]     ERROR Driver initialisation failed
+[2022-06-01 19:47:00,566]     ERROR Driver initialisation failed
+[2022-06-01 18:48:02,732]     ERROR Driver initialisation failed
+[2022-06-01 18:48:06,702]     ERROR Driver initialisation failed
+[2022-06-01 18:48:07,872]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,036]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,202]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,456]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,622]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,801]     ERROR Driver initialisation failed
+[2022-06-01 18:48:08,982]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,147]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,646]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,678]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,707]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,737]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,767]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,800]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,830]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,858]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,889]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,918]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,950]     ERROR Driver initialisation failed
+[2022-06-01 18:48:09,980]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,007]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,038]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,069]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,098]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,129]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,158]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,189]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,219]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,250]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,285]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,310]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,340]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,370]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,400]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,430]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,460]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,490]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,525]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,551]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,580]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,610]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,640]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,670]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,701]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,731]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,763]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,791]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,821]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,852]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,881]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,912]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,944]     ERROR Driver initialisation failed
+[2022-06-01 18:48:10,972]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,002]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,034]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,066]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,093]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,124]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,153]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,183]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,214]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,245]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,274]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,305]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,335]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,366]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,395]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,427]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,455]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,485]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,516]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,546]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,577]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,607]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,637]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,669]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,699]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,728]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,758]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,793]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,821]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,851]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,881]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,911]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,940]     ERROR Driver initialisation failed
+[2022-06-01 18:48:11,972]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,001]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,033]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,062]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,091]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,122]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,152]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,182]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,212]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,242]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,272]     ERROR Driver initialisation failed
+[2022-06-01 18:48:12,305]     ERROR Driver initialisation failed
+[2022-06-01 18:51:00,626]     ERROR Driver initialisation failed
+[2022-06-01 18:54:50,907]     ERROR Driver initialisation failed
+[2022-06-01 18:54:59,317]     ERROR Driver initialisation failed
+[2022-06-01 19:01:27,784]     ERROR Driver initialisation failed
+[2022-06-01 19:02:49,276]     ERROR Driver initialisation failed
+[2022-06-01 19:06:04,396]     ERROR Driver initialisation failed
+[2022-06-01 19:06:12,285]     ERROR Driver initialisation failed
+[2022-06-01 19:12:04,327]     ERROR 
+[2022-06-01 19:12:52,914]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,914]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,921]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,924]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,925]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,925]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,926]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,927]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,927]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,928]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,928]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,929]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,929]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,929]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,932]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,933]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,934]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,936]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,937]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,938]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,939]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,940]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,941]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,943]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,945]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,946]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,948]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,949]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,950]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,950]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,951]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,952]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,953]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,954]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,954]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,955]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,957]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,958]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,959]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,960]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,961]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,962]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,963]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,964]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,964]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,965]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,966]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,966]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,967]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,968]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,969]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,969]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,970]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,971]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,972]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,973]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,973]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,974]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,975]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,976]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,976]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,977]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,978]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,978]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,979]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,980]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,981]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,982]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,983]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,983]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,984]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,985]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,985]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,986]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,987]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,988]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,988]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,989]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,990]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,991]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,992]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,992]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,993]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,994]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,994]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,995]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,996]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,996]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,997]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,998]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,999]     ERROR Driver initialisation failed
+[2022-06-01 19:12:52,999]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,000]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,001]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,002]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,002]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,003]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,004]     ERROR Driver initialisation failed
+[2022-06-01 19:12:53,004]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,789]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,789]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,790]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,791]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,792]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,792]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,793]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,793]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,794]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,795]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,796]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,797]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,799]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,801]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,803]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,805]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,806]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,807]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,809]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,810]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,812]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,813]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,815]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,817]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,820]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,821]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,823]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,824]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,826]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,827]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,829]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,829]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,830]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,831]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,832]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,833]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,834]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,835]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,836]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,836]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,837]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,838]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,839]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,839]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,840]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,841]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,842]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,842]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,843]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,844]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,844]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,845]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,846]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,846]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,847]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,847]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,848]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,849]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,850]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,850]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,851]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,851]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,852]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,853]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,853]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,854]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,855]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,855]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,856]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,856]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,857]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,857]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,858]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,859]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,860]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,860]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,861]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,861]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,862]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,863]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,863]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,864]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,865]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,865]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,866]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,866]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,866]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,867]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,867]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,868]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,868]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,869]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,869]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,870]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,870]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,870]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,871]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,871]     ERROR Driver initialisation failed
+[2022-06-01 19:13:13,872]     ERROR Driver initialisation failed
+[2022-06-01 19:17:23,006]     ERROR Driver initialisation failed
+[2022-06-01 19:17:27,448]     ERROR Driver initialisation failed
+[2022-06-01 19:17:51,969]     ERROR Driver initialisation failed

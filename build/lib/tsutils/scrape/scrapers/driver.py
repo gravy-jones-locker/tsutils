@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 from typing import Callable
 
 from .scraper import Scraper
-from ..utils.response import Response as Response
+from ..models.response import Response as Response
 from ..utils.chrome import Chrome
 from ..exceptions import *
 
@@ -34,7 +34,8 @@ class Driver(Scraper):
         "headless": True,  # The top three are Chrome defaults
         "chromedriver_path": None,
         "incognito": False,
-        "stealth": False,
+        "ignore_images": True,
+        "ignore_scripts": False,
         "load_timeout": 30,
         "load_retries": 3,
         "post_load_wait": 1,
@@ -75,7 +76,7 @@ class Driver(Scraper):
         if len(_instances) == 0:
             _instances.append(cls(**settings))
         driver = _instances[0]
-        if settings != driver._settings:
+        if not all([v == driver._settings[k] for k, v in settings.items()]):
             raise LiveDriverError('Cannot start mismatched Driver instance')
         return driver
 
@@ -102,6 +103,10 @@ class Driver(Scraper):
         Send quit signal to underlying Chrome instance.
         """
         self._chrome.quit()
+        global _instances
+
+        if self in _instances:
+            _instances.remove(self)
     
     def reset_profile(self) -> None:
         """
@@ -117,8 +122,9 @@ class Driver(Scraper):
             time.sleep(load_secs)
             if self._verify_loaded(wait_xpath):
                 return
+            logger.debug(f'Xpath ({wait_xpath}) not found')
             attempts += 1
-        raise PageLoadFailedError
+        raise PageLoadFailedError('Page failed to load')
 
     def _rotate_host(self) -> None:
         self._chrome.configure_host(next(self._hosts), del_data=True)

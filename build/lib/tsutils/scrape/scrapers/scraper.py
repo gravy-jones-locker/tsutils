@@ -6,11 +6,13 @@ import logging
 import time
 
 from typing import Callable
+from bdb import BdbQuit
 
 from ...common.datautils import update_defaults
-from ..utils.response import Response
-from ..utils.hosts import Hosts
+from ..models.response import Response
+from ..models.hosts import Hosts
 from ..exceptions import *
+from ..utils.constants import CAPTCHA_STRS
 
 logger = logging.getLogger('tsutils')
 
@@ -21,7 +23,9 @@ class Scraper:
     """
     defaults = {
         "proxy_file": None,
-        "request_retries": 0,
+        "proxy_type": "all",
+        "captcha_strs": [],
+        "request_retries": 1,
         "request_retry_interval": 1,
         "rotate_host": True,
         "headers": {}
@@ -48,7 +52,9 @@ class Scraper:
 
     def __init__(self, **settings) -> None:
         self._settings = update_defaults(self.defaults, settings)
-        self._hosts = Hosts(self._settings["proxy_file"])
+        self._hosts = Hosts(
+            self._settings["proxy_file"], 
+            self._settings["proxy_type"])
     
     @Decorators.handle_response
     def get(self, url: str, *args, **kwargs) -> Response:
@@ -57,23 +63,29 @@ class Scraper:
     def _parse_response(self, resp: Response) -> Response:
         if resp.status_code == 404:
             raise ResourceNotFoundError(resp.url)
+
         # TODO might want to be able to do redirect handling - need concrete
         # use case.
-        if resp.captchaed:
+        if self._detect_captcha(resp):
             resp = self._solve_captcha(resp)
-            if resp.captchaed:
+            if self._detect_captcha(resp):
                 raise CaptchaHitError(resp.url)
+
         if not resp.ok:
             raise RequestFailedError(resp.msg)
         return resp
     
     def _handle_error(self, exc: Exception, iteration: int) -> None:
-        if 'tsutils' not in exc.__module__:
-            logger.error(exc.msg)
-        if isinstance(exc, ResourceNotFoundError):
+        if isinstance(exc, (KeyboardInterrupt, BdbQuit, ResourceNotFoundError)):
             raise exc
         if self._settings["rotate_host"]:
-            logger.info(f'Rotating host')
+            logger.debug(f'Rotating host ({exc})')
             self._rotate_host()
         if iteration == self._settings["request_retries"]:
             raise exc
+
+    def _detect_captcha(self, resp: Response) -> bool:
+        captchas = CAPTCHA_STRS + self._settings["captcha_strs"]
+        if any([x in resp.text for x in captchas]):
+            return True
+        return False

@@ -1,7 +1,8 @@
 from ..common.exceptions import *
 
 class ResourceNotFoundError(SkipIterationError):
-    pass
+    def __init__(self, url: str) -> None:
+        super().__init__(f'Nothing found at {url}')
 
 class PageLoadFailedError(NotificationError):
     pass
@@ -22,4 +23,7 @@ class WrongFieldTypeError(SkipIterationError):
         super().__init__(f'{xpath} could not be resolved into a string')
 
 class LiveDriverError(CriticalError):
+    pass
+
+class StopScrapeError(StopPoolExecutionError):
     pass
