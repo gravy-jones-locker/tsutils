@@ -124,7 +124,7 @@ class Driver(Scraper):
                 return
             logger.debug(f'Xpath ({wait_xpath}) not found')
             attempts += 1
-        raise PageLoadFailedError
+        raise PageLoadFailedError('Page failed to load')
 
     def _rotate_host(self) -> None:
         self._chrome.configure_host(next(self._hosts), del_data=True)
