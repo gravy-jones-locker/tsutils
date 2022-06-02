@@ -7,4 +7,5 @@ tsutils/input/data/chrome/**
 test_files/**
 test_files
 test.py
+build
 !.gitkeep

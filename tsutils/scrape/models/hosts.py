@@ -50,10 +50,12 @@ class Hosts:
         proxies = load_json(proxy_file)
 
         # If proxy type is specified then remove the alternative type
-        if proxy_type == 'rotating':
-            proxies.pop('static')
+        for key in ['rotating', 'static_short', 'static_long']:
+            if proxy_type == key:
+                proxies = {key: proxies[key]}
         if proxy_type == 'static':
-            proxies.pop('rotating')
+            proxies = {'static': [*proxies["static_short"], 
+                                  *proxies["static_long"]]}
 
         return [y for x in proxies.values() for y in x]
     

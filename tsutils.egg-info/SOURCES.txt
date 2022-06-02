@@ -25,6 +25,10 @@ tsutils/scrape/__init__.py
 tsutils/scrape/exceptions.py
 tsutils/scrape/session.py
 tsutils/scrape/source.py
+tsutils/scrape/models/__init__.py
+tsutils/scrape/models/field.py
+tsutils/scrape/models/hosts.py
+tsutils/scrape/models/response.py
 tsutils/scrape/scrapers/__init__.py
 tsutils/scrape/scrapers/driver.py
 tsutils/scrape/scrapers/requester.py

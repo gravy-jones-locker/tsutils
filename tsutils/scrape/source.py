@@ -11,7 +11,7 @@ from bdb import BdbQuit
 
 from ..common.datautils import update_defaults
 from .scrapers import Requester, Driver, Scraper, APIRequester
-from .exceptions import StopScrapeError
+from .exceptions import StopScrapeError, ScrapeFailedError
 from .models.field import HTMLField, APIField
 from .models.response import Response
 
@@ -206,14 +206,15 @@ class DefensiveSource(Source):
 
     guided_initialisation = False
 
+    wait_xpath = None
+
     def __init__(self) -> None:
         super().__init__()
 
         self.scraper_settings.update(  # These are needed to hold a session open
             {"rotate_host": False,
-             "request_retries": 5,
+             "request_retries": 3,
              "spin_hosts": False,
-             "session": True,
              })
 
     def scrape_url(self, url: str, ad_fields: dict, 
@@ -228,23 +229,25 @@ class DefensiveSource(Source):
         kwargs["cookies"] = self._live_session["cookies"]
         try:
             return super().scrape_url(url, ad_fields, **kwargs)
-        except:
+        except ScrapeFailedError:
+            logger.info('Session went down. Reconfiguring')
             return self._configure_session(url)
 
     def _configure_session(self, url: str) -> None:
         logger.info('Configuring defensive HTML source session')
         try:
-            resp = self.driver.get(url, wait_xpath='//h1[@class="citation__title"]')
+            resp = self.driver.get(url, wait_xpath=self.wait_xpath)
             self._live_session = {
                 "cookies": dict(resp.cookies),
                 "host": self.driver._chrome.host,
             }
+            logger.error('Session initialisation was successful')
             self._restart_scraper()
             return self._parse_response(resp, {})
         except Exception as exc:
             if isinstance(exc, (KeyboardInterrupt, BdbQuit)):
                 raise exc
-            logger.error('Driver initialisation failed')
+            logger.error('Session initialisation failed')
             logger.debug('', exc_info=1)
             return self._parse_response(None, {})
     
@@ -255,7 +258,6 @@ class DefensiveSource(Source):
                 ignore_scripts=True,
                 request_retries=5,
                 incognito=True,
-                post_load_wait=5,
                 proxy_file=self.proxy_file,
                 proxy_type='static',
                 headless=not self.guided_initialisation)

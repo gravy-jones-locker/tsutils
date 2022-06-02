@@ -38,14 +38,14 @@ class Scraper:
             Wrap the given function in response/error parsing logic and return 
             output.
             """
-            def inner(scraper, *args, **kwargs) -> Response:
+            def inner(scraper, url, *args, **kwargs) -> Response:
                 iteration = 0
                 while iteration - 1 < scraper._settings["request_retries"]:
                     try:
-                        resp = func(scraper, *args, **kwargs)
+                        resp = func(scraper, url, *args, **kwargs)
                         return scraper._parse_response(resp)
                     except Exception as e:
-                        scraper._handle_error(e, iteration)
+                        scraper._handle_error(e, url, iteration)
                     time.sleep(scraper._settings["request_retry_interval"])
                     iteration += 1
             return inner
@@ -75,14 +75,14 @@ class Scraper:
             raise RequestFailedError(resp.msg)
         return resp
     
-    def _handle_error(self, exc: Exception, iteration: int) -> None:
+    def _handle_error(self, exc: Exception, url: str, iteration: int) -> None:
         if isinstance(exc, (KeyboardInterrupt, BdbQuit, ResourceNotFoundError)):
             raise exc
         if self._settings["rotate_host"]:
             logger.debug(f'Rotating host ({exc})')
             self._rotate_host()
         if iteration == self._settings["request_retries"]:
-            raise exc
+            raise ScrapeFailedError(f'All requests to {url} failed') from exc
 
     def _detect_captcha(self, resp: Response) -> bool:
         captchas = CAPTCHA_STRS + self._settings["captcha_strs"]

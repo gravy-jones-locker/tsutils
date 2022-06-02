@@ -7,6 +7,9 @@ class ResourceNotFoundError(SkipIterationError):
 class PageLoadFailedError(NotificationError):
     pass
 
+class ScrapeFailedError(NotificationError):
+    pass
+
 class RequestFailedError(QuietError):
     def __init__(self, msg: str) -> None:
         super().__init__(f'Request failed - {msg}')
