@@ -23,7 +23,7 @@ class Scraper:
     """
     defaults = {
         "proxy_file": None,
-        "select_proxy": False,
+        "proxy_type": "all",
         "captcha_strs": [],
         "request_retries": 1,
         "request_retry_interval": 1,
@@ -54,7 +54,7 @@ class Scraper:
         self._settings = update_defaults(self.defaults, settings)
         self._hosts = Hosts(
             self._settings["proxy_file"], 
-            self._settings["select_proxy"])
+            self._settings["proxy_type"])
     
     @Decorators.handle_response
     def get(self, url: str, *args, **kwargs) -> Response:
