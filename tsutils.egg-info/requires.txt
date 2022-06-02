@@ -1,0 +1,7 @@
+requests
+selenium-wire
+packaging
+lxml
+undetected-chromedriver
+cloudscraper
+selenium

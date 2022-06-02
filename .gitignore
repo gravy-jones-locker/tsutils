@@ -7,7 +7,4 @@ tsutils/input/data/chrome/**
 test_files/**
 test_files
 test.py
-build
-pyproject.toml
-tsutils.egg-info
 !.gitkeep

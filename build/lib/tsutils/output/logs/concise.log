@@ -1,0 +1,916 @@
+[2022-05-13 13:52:19,035] ERROR: hello
+[2022-05-13 13:53:38,431] ERROR: hello
+[2022-05-13 13:54:55,486] ERROR: ()
+[2022-05-17 14:51:53,477] ERROR: ('No requests were made to https://asdf.asdfjdjjkkk/',)
+[2022-05-17 14:57:10,128] ERROR: ('No requests were made to https://asdf.asdfjdjjkkk/',)
+[2022-05-17 14:57:46,940] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:01:08,199] ERROR: 
+[2022-05-17 15:01:26,103] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:01:26,109] ERROR: ... skipping
+[2022-05-17 15:02:37,416] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:02:37,421] ERROR: https://asdf.asdfjdjjkkk/... skipping
+[2022-05-18 14:58:49,415] ERROR: 503 raised while requesting https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-18 15:18:03,628] ERROR: No requests made to (https://asdfs.bbboadfa/)
+[2022-05-18 15:18:03,640] ERROR: https://asdfs.bbboadfa/... skipping
+[2022-05-18 15:18:32,192] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:18:32,197] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-18 15:19:00,592] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:19:00,620] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-18 15:20:03,169] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:20:21,301] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-23 12:00:54,375] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 12:58:26,507] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 13:02:50,279] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 13:52:28,986] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:03:57,050] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,802] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,803] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,816] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:15,203] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:10:09,914] INFO: Processing #1/7
+[2022-05-23 14:10:11,079] INFO: Processing #2/7
+[2022-05-23 14:10:13,073] INFO: Processing #3/7
+[2022-05-23 14:10:15,160] INFO: Processing #4/7
+[2022-05-23 14:10:16,685] INFO: Processing #5/7
+[2022-05-23 14:10:17,594] INFO: Processing #6/7
+[2022-05-23 14:10:18,440] INFO: Processing #7/7
+[2022-05-23 14:13:08,883] INFO: Processing #1/7
+[2022-05-23 14:17:57,230] INFO: Processing #1/7
+[2022-05-23 14:19:02,629] INFO: Processing #1/7
+[2022-05-23 14:19:40,040] INFO: Processing #1/7
+[2022-05-23 14:20:12,714] INFO: Processing #1/7
+[2022-05-23 14:47:46,939] INFO: Processing #1/7
+[2022-05-23 14:47:53,513] INFO: Processing #2/7
+[2022-05-23 14:48:00,921] INFO: Processing #3/7
+[2022-05-23 14:48:07,297] INFO: Processing #4/7
+[2022-05-23 14:48:14,139] INFO: Processing #5/7
+[2022-05-23 14:48:20,278] INFO: Processing #6/7
+[2022-05-23 14:48:26,117] INFO: Processing #7/7
+[2022-05-23 14:57:56,336] INFO: Processing #1/7
+[2022-05-23 14:57:56,897] INFO: Processing #2/7
+[2022-05-23 14:57:57,528] INFO: Processing #3/7
+[2022-05-23 14:57:57,854] INFO: Processing #4/7
+[2022-05-23 14:57:58,175] INFO: Processing #5/7
+[2022-05-23 14:57:58,654] INFO: Processing #6/7
+[2022-05-23 14:57:58,990] INFO: Processing #7/7
+[2022-05-23 15:22:10,457] INFO: Processing #1/7
+[2022-05-23 15:25:39,950] INFO: Processing #2/7
+[2022-05-23 15:36:38,703] INFO: Processing #1/7
+[2022-05-23 15:37:07,248] INFO: Processing #1/7
+[2022-05-23 15:38:07,097] ERROR: No requests could be made to https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 15:38:11,367] ERROR: No requests could be made to https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 15:38:18,722] INFO: Processing #1/7
+[2022-05-23 15:44:06,507] INFO: Processing #1/7
+[2022-05-23 15:44:09,899] INFO: Processing #2/7
+[2022-05-23 15:44:12,924] INFO: Processing #3/7
+[2022-05-23 15:44:15,842] INFO: Processing #4/7
+[2022-05-23 15:44:18,556] INFO: Processing #5/7
+[2022-05-23 15:44:21,444] INFO: Processing #6/7
+[2022-05-23 15:44:24,184] INFO: Processing #7/7
+[2022-05-23 15:44:51,980] INFO: Processing #1/7
+[2022-05-23 15:44:52,597] INFO: Processing #2/7
+[2022-05-23 15:44:53,784] INFO: Processing #3/7
+[2022-05-23 15:44:54,476] INFO: Processing #4/7
+[2022-05-23 15:44:54,882] INFO: Processing #5/7
+[2022-05-23 15:44:55,227] INFO: Processing #6/7
+[2022-05-23 15:44:55,791] INFO: Processing #7/7
+[2022-05-23 15:45:00,551] INFO: Processing #1/7
+[2022-05-23 15:45:01,056] INFO: Processing #2/7
+[2022-05-23 15:45:01,543] INFO: Processing #3/7
+[2022-05-23 15:45:01,914] INFO: Processing #4/7
+[2022-05-23 15:45:02,303] INFO: Processing #5/7
+[2022-05-23 15:45:02,911] INFO: Processing #6/7
+[2022-05-23 15:45:03,471] INFO: Processing #7/7
+[2022-05-23 15:54:35,639] INFO: Processing #1/7
+[2022-05-23 15:54:35,687] INFO: Processing #2/7
+[2022-05-23 15:54:35,717] INFO: Processing #3/7
+[2022-05-23 15:54:35,750] INFO: Processing #4/7
+[2022-05-23 15:54:35,789] INFO: Processing #5/7
+[2022-05-23 15:54:35,813] INFO: Processing #6/7
+[2022-05-23 15:54:35,837] INFO: Processing #7/7
+[2022-05-23 15:56:09,402] INFO: Processing #1/7
+[2022-05-23 15:56:09,425] INFO: Processing #2/7
+[2022-05-23 15:56:09,459] INFO: Processing #3/7
+[2022-05-23 15:56:09,487] INFO: Processing #4/7
+[2022-05-23 15:56:09,518] INFO: Processing #5/7
+[2022-05-23 15:56:09,552] INFO: Processing #6/7
+[2022-05-23 15:56:09,592] INFO: Processing #7/7
+[2022-05-23 16:00:30,682] INFO: Processing #1/7
+[2022-05-23 16:00:30,887] INFO: Processing #2/7
+[2022-05-23 16:00:31,075] INFO: Processing #3/7
+[2022-05-23 16:00:31,375] INFO: Processing #4/7
+[2022-05-23 16:00:31,573] INFO: Processing #5/7
+[2022-05-23 16:00:31,987] INFO: Processing #6/7
+[2022-05-23 16:00:32,171] INFO: Processing #7/7
+[2022-05-23 16:00:50,045] INFO: Processing #1/7
+[2022-05-23 16:00:55,316] INFO: Processing #2/7
+[2022-05-23 16:01:01,508] INFO: Processing #3/7
+[2022-05-23 16:01:02,571] INFO: Processing #4/7
+[2022-05-23 16:06:26,917] INFO: Processing #1/7
+[2022-05-23 16:06:50,886] INFO: Processing #1/7
+[2022-05-23 16:09:00,474] INFO: Processing #1/7
+[2022-05-23 16:10:28,104] INFO: Processing #1/7
+[2022-05-23 17:12:49,112] INFO: Processing search page #0/7
+[2022-05-23 17:12:57,068] INFO: Processing sub page #9/['75']
+[2022-05-23 17:13:41,261] INFO: Processing search page #1/7
+[2022-05-23 17:13:50,445] INFO: Processing sub page #10/75
+[2022-05-23 17:14:01,359] INFO: Processing sub page #20/75
+[2022-05-23 17:14:12,570] INFO: Processing sub page #30/75
+[2022-05-24 14:17:07,593] INFO: hello
+[2022-05-26 16:11:59,899] ERROR: No source is configured for https://google.com
+[2022-05-26 16:12:41,765] ERROR: No source is configured for https://google.com
+[2022-05-26 16:12:41,765] INFO: Scraping https://google.com failed
+[2022-05-26 16:19:58,476] INFO: Scraping https://google.com failed
+[2022-05-26 16:23:15,007] INFO: Scraping https://google.com failed
+[2022-05-26 16:44:40,864] ERROR: //div could not be resolved into a string... skipping
+[2022-05-26 16:45:15,014] ERROR: //div could not be resolved into a string... skipping
+[2022-05-26 16:45:15,014] INFO: Skipping
+[2022-05-27 09:20:24,508] ERROR: No source is configured for https://google.com... skipping
+[2022-05-27 09:20:24,510] INFO: Scraping https://google.com failed
+[2022-05-27 09:22:23,241] ERROR: No source is configured for https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 09:22:23,242] INFO: Scraping https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b failed
+[2022-05-27 09:28:28,390] INFO: Processing #1/2
+[2022-05-27 09:28:29,699] INFO: Processing #2/2
+[2022-05-27 09:29:32,472] INFO: Processing #1/2
+[2022-05-27 09:29:33,898] INFO: Processing #2/2
+[2022-05-27 09:30:23,253] INFO: Processing #1/2
+[2022-05-27 09:30:24,428] INFO: Processing #2/2
+[2022-05-27 09:41:44,763] INFO: Processing #1/7
+[2022-05-27 09:41:44,890] INFO: Processing #2/7
+[2022-05-27 09:41:44,980] INFO: Processing #3/7
+[2022-05-27 09:41:46,033] INFO: Processing #4/7
+[2022-05-27 09:41:46,135] INFO: Processing #5/7
+[2022-05-27 09:41:46,300] INFO: Processing #6/7
+[2022-05-27 09:41:47,219] INFO: Processing #7/7
+[2022-05-27 09:50:16,491] ERROR: Driver instances cannot be run in parallel CRITICAL - QUITTING
+[2022-05-27 09:50:37,821] ERROR: Driver instances cannot be run in parallel... CRITICAL - QUITTING
+[2022-05-27 09:51:27,006] INFO: Processing #5/7
+[2022-05-27 10:09:30,563] ERROR: Proxy file at adsfvv.gkk not found. Ignoring
+[2022-05-27 11:27:24,411] INFO: Processing #2/2
+[2022-05-27 11:36:06,133] ERROR: No source is configured for https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 11:36:06,134] INFO: Scraping https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b failed
+[2022-05-27 11:36:06,134] ERROR: No source is configured for https://www.amazon.com/s?k=%22economic%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 11:36:06,134] INFO: Scraping https://www.amazon.com/s?k=%22economic%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b failed
+[2022-05-27 11:36:06,134] INFO: Processing #2/2
+[2022-05-27 11:38:43,738] INFO: Processing #2/2
+[2022-05-27 12:11:27,459] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:29,897] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:32,311] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:35,045] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 14:22:52,292] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,293] INFO: Scraping h failed
+[2022-05-27 14:22:52,294] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,294] INFO: Scraping t failed
+[2022-05-27 14:22:52,295] INFO: Processing #2/206
+[2022-05-27 14:22:52,295] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,296] INFO: Scraping t failed
+[2022-05-27 14:22:52,297] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,297] INFO: Scraping p failed
+[2022-05-27 14:22:52,298] INFO: Processing #4/206
+[2022-05-27 14:22:52,298] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,299] INFO: Scraping s failed
+[2022-05-27 14:22:52,299] ERROR: No source is configured for :... skipping
+[2022-05-27 14:22:52,300] INFO: Scraping : failed
+[2022-05-27 14:22:52,300] INFO: Processing #6/206
+[2022-05-27 14:22:52,301] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,302] INFO: Scraping / failed
+[2022-05-27 14:22:52,302] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,303] INFO: Scraping / failed
+[2022-05-27 14:22:52,303] INFO: Processing #8/206
+[2022-05-27 14:22:52,304] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,305] INFO: Scraping w failed
+[2022-05-27 14:22:52,305] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,306] INFO: Scraping w failed
+[2022-05-27 14:22:52,306] INFO: Processing #10/206
+[2022-05-27 14:22:52,307] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,307] INFO: Scraping w failed
+[2022-05-27 14:22:52,308] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,308] INFO: Scraping . failed
+[2022-05-27 14:22:52,310] INFO: Processing #12/206
+[2022-05-27 14:22:52,310] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,311] INFO: Scraping a failed
+[2022-05-27 14:22:52,312] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,312] INFO: Scraping m failed
+[2022-05-27 14:22:52,313] INFO: Processing #14/206
+[2022-05-27 14:22:52,313] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,314] INFO: Scraping a failed
+[2022-05-27 14:22:52,314] ERROR: No source is configured for z... skipping
+[2022-05-27 14:22:52,315] INFO: Scraping z failed
+[2022-05-27 14:22:52,315] INFO: Processing #16/206
+[2022-05-27 14:22:52,316] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,317] INFO: Scraping o failed
+[2022-05-27 14:22:52,317] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,318] INFO: Scraping n failed
+[2022-05-27 14:22:52,319] INFO: Processing #18/206
+[2022-05-27 14:22:52,320] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,320] INFO: Scraping . failed
+[2022-05-27 14:22:52,321] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,322] INFO: Scraping c failed
+[2022-05-27 14:22:52,322] INFO: Processing #20/206
+[2022-05-27 14:22:52,323] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,323] INFO: Scraping o failed
+[2022-05-27 14:22:52,324] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,325] INFO: Scraping m failed
+[2022-05-27 14:22:52,325] INFO: Processing #22/206
+[2022-05-27 14:22:52,326] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,326] INFO: Scraping / failed
+[2022-05-27 14:22:52,327] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,327] INFO: Scraping s failed
+[2022-05-27 14:22:52,328] INFO: Processing #24/206
+[2022-05-27 14:22:52,328] ERROR: No source is configured for ?... skipping
+[2022-05-27 14:22:52,329] INFO: Scraping ? failed
+[2022-05-27 14:22:52,330] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,330] INFO: Scraping k failed
+[2022-05-27 14:22:52,331] INFO: Processing #26/206
+[2022-05-27 14:22:52,331] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,332] INFO: Scraping = failed
+[2022-05-27 14:22:52,332] ERROR: No source is configured for %... skipping
+[2022-05-27 14:22:52,333] INFO: Scraping % failed
+[2022-05-27 14:22:52,333] INFO: Processing #28/206
+[2022-05-27 14:22:52,334] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,335] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,336] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,337] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,337] INFO: Processing #30/206
+[2022-05-27 14:22:52,338] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,338] INFO: Scraping u failed
+[2022-05-27 14:22:52,339] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,340] INFO: Scraping n failed
+[2022-05-27 14:22:52,340] INFO: Processing #32/206
+[2022-05-27 14:22:52,341] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,341] INFO: Scraping i failed
+[2022-05-27 14:22:52,342] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,342] INFO: Scraping v failed
+[2022-05-27 14:22:52,343] INFO: Processing #34/206
+[2022-05-27 14:22:52,343] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,344] INFO: Scraping e failed
+[2022-05-27 14:22:52,344] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,345] INFO: Scraping r failed
+[2022-05-27 14:22:52,345] INFO: Processing #36/206
+[2022-05-27 14:22:52,346] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,347] INFO: Scraping s failed
+[2022-05-27 14:22:52,347] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,348] INFO: Scraping i failed
+[2022-05-27 14:22:52,348] INFO: Processing #38/206
+[2022-05-27 14:22:52,349] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,349] INFO: Scraping t failed
+[2022-05-27 14:22:52,350] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,350] INFO: Scraping y failed
+[2022-05-27 14:22:52,351] INFO: Processing #40/206
+[2022-05-27 14:22:52,351] ERROR: No source is configured for +... skipping
+[2022-05-27 14:22:52,352] INFO: Scraping + failed
+[2022-05-27 14:22:52,353] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,353] INFO: Scraping o failed
+[2022-05-27 14:22:52,354] INFO: Processing #42/206
+[2022-05-27 14:22:52,354] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,355] INFO: Scraping f failed
+[2022-05-27 14:22:52,355] ERROR: No source is configured for %... skipping
+[2022-05-27 14:22:52,356] INFO: Scraping % failed
+[2022-05-27 14:22:52,356] INFO: Processing #44/206
+[2022-05-27 14:22:52,357] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,357] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,358] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,359] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,359] INFO: Processing #46/206
+[2022-05-27 14:22:52,360] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,360] INFO: Scraping & failed
+[2022-05-27 14:22:52,361] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,361] INFO: Scraping i failed
+[2022-05-27 14:22:52,362] INFO: Processing #48/206
+[2022-05-27 14:22:52,362] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,363] INFO: Scraping = failed
+[2022-05-27 14:22:52,364] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,364] INFO: Scraping s failed
+[2022-05-27 14:22:52,365] INFO: Processing #50/206
+[2022-05-27 14:22:52,365] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,366] INFO: Scraping t failed
+[2022-05-27 14:22:52,366] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,367] INFO: Scraping r failed
+[2022-05-27 14:22:52,368] INFO: Processing #52/206
+[2022-05-27 14:22:52,368] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,369] INFO: Scraping i failed
+[2022-05-27 14:22:52,369] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,370] INFO: Scraping p failed
+[2022-05-27 14:22:52,370] INFO: Processing #54/206
+[2022-05-27 14:22:52,371] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,371] INFO: Scraping b failed
+[2022-05-27 14:22:52,372] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,373] INFO: Scraping o failed
+[2022-05-27 14:22:52,373] INFO: Processing #56/206
+[2022-05-27 14:22:52,374] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,374] INFO: Scraping o failed
+[2022-05-27 14:22:52,375] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,375] INFO: Scraping k failed
+[2022-05-27 14:22:52,376] INFO: Processing #58/206
+[2022-05-27 14:22:52,376] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,377] INFO: Scraping s failed
+[2022-05-27 14:22:52,377] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,378] INFO: Scraping & failed
+[2022-05-27 14:22:52,378] INFO: Processing #60/206
+[2022-05-27 14:22:52,379] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,380] INFO: Scraping s failed
+[2022-05-27 14:22:52,380] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,381] INFO: Scraping = failed
+[2022-05-27 14:22:52,381] INFO: Processing #62/206
+[2022-05-27 14:22:52,382] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,382] INFO: Scraping d failed
+[2022-05-27 14:22:52,383] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,384] INFO: Scraping a failed
+[2022-05-27 14:22:52,384] INFO: Processing #64/206
+[2022-05-27 14:22:52,385] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,386] INFO: Scraping t failed
+[2022-05-27 14:22:52,387] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,387] INFO: Scraping e failed
+[2022-05-27 14:22:52,388] INFO: Processing #66/206
+[2022-05-27 14:22:52,388] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,389] INFO: Scraping r failed
+[2022-05-27 14:22:52,390] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,390] INFO: Scraping a failed
+[2022-05-27 14:22:52,391] INFO: Processing #68/206
+[2022-05-27 14:22:52,391] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,392] INFO: Scraping n failed
+[2022-05-27 14:22:52,392] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,393] INFO: Scraping k failed
+[2022-05-27 14:22:52,394] INFO: Processing #70/206
+[2022-05-27 14:22:52,394] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,395] INFO: Scraping & failed
+[2022-05-27 14:22:52,395] ERROR: No source is configured for A... skipping
+[2022-05-27 14:22:52,396] INFO: Scraping A failed
+[2022-05-27 14:22:52,396] INFO: Processing #72/206
+[2022-05-27 14:22:52,397] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,397] INFO: Scraping d failed
+[2022-05-27 14:22:52,398] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,399] INFO: Scraping v failed
+[2022-05-27 14:22:52,399] INFO: Processing #74/206
+[2022-05-27 14:22:52,400] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,400] INFO: Scraping - failed
+[2022-05-27 14:22:52,401] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,402] INFO: Scraping S failed
+[2022-05-27 14:22:52,403] INFO: Processing #76/206
+[2022-05-27 14:22:52,403] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,404] INFO: Scraping r failed
+[2022-05-27 14:22:52,405] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,406] INFO: Scraping c failed
+[2022-05-27 14:22:52,406] INFO: Processing #78/206
+[2022-05-27 14:22:52,407] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,407] INFO: Scraping h failed
+[2022-05-27 14:22:52,409] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,410] INFO: Scraping - failed
+[2022-05-27 14:22:52,410] INFO: Processing #80/206
+[2022-05-27 14:22:52,411] ERROR: No source is configured for B... skipping
+[2022-05-27 14:22:52,411] INFO: Scraping B failed
+[2022-05-27 14:22:52,412] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,412] INFO: Scraping o failed
+[2022-05-27 14:22:52,413] INFO: Processing #82/206
+[2022-05-27 14:22:52,413] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,414] INFO: Scraping o failed
+[2022-05-27 14:22:52,414] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,415] INFO: Scraping k failed
+[2022-05-27 14:22:52,415] INFO: Processing #84/206
+[2022-05-27 14:22:52,416] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,417] INFO: Scraping s failed
+[2022-05-27 14:22:52,417] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,418] INFO: Scraping - failed
+[2022-05-27 14:22:52,419] INFO: Processing #86/206
+[2022-05-27 14:22:52,419] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,420] INFO: Scraping S failed
+[2022-05-27 14:22:52,421] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,422] INFO: Scraping u failed
+[2022-05-27 14:22:52,422] INFO: Processing #88/206
+[2022-05-27 14:22:52,423] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,423] INFO: Scraping b failed
+[2022-05-27 14:22:52,424] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,424] INFO: Scraping m failed
+[2022-05-27 14:22:52,425] INFO: Processing #90/206
+[2022-05-27 14:22:52,426] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,426] INFO: Scraping i failed
+[2022-05-27 14:22:52,427] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,427] INFO: Scraping t failed
+[2022-05-27 14:22:52,428] INFO: Processing #92/206
+[2022-05-27 14:22:52,428] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,429] INFO: Scraping . failed
+[2022-05-27 14:22:52,429] ERROR: No source is configured for x... skipping
+[2022-05-27 14:22:52,430] INFO: Scraping x failed
+[2022-05-27 14:22:52,430] INFO: Processing #94/206
+[2022-05-27 14:22:52,431] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,431] INFO: Scraping = failed
+[2022-05-27 14:22:52,432] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,433] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,433] INFO: Processing #96/206
+[2022-05-27 14:22:52,434] ERROR: No source is configured for 6... skipping
+[2022-05-27 14:22:52,435] INFO: Scraping 6 failed
+[2022-05-27 14:22:52,435] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,436] INFO: Scraping & failed
+[2022-05-27 14:22:52,437] INFO: Processing #98/206
+[2022-05-27 14:22:52,437] ERROR: No source is configured for A... skipping
+[2022-05-27 14:22:52,438] INFO: Scraping A failed
+[2022-05-27 14:22:52,439] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,439] INFO: Scraping d failed
+[2022-05-27 14:22:52,440] INFO: Processing #100/206
+[2022-05-27 14:22:52,440] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,441] INFO: Scraping v failed
+[2022-05-27 14:22:52,442] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,449] INFO: Scraping - failed
+[2022-05-27 14:22:52,450] INFO: Processing #102/206
+[2022-05-27 14:22:52,450] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,451] INFO: Scraping S failed
+[2022-05-27 14:22:52,452] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,453] INFO: Scraping r failed
+[2022-05-27 14:22:52,453] INFO: Processing #104/206
+[2022-05-27 14:22:52,454] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,455] INFO: Scraping c failed
+[2022-05-27 14:22:52,455] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,456] INFO: Scraping h failed
+[2022-05-27 14:22:52,457] INFO: Processing #106/206
+[2022-05-27 14:22:52,457] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,458] INFO: Scraping - failed
+[2022-05-27 14:22:52,458] ERROR: No source is configured for B... skipping
+[2022-05-27 14:22:52,459] INFO: Scraping B failed
+[2022-05-27 14:22:52,459] INFO: Processing #108/206
+[2022-05-27 14:22:52,460] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,461] INFO: Scraping o failed
+[2022-05-27 14:22:52,461] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,462] INFO: Scraping o failed
+[2022-05-27 14:22:52,462] INFO: Processing #110/206
+[2022-05-27 14:22:52,463] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,463] INFO: Scraping k failed
+[2022-05-27 14:22:52,464] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,464] INFO: Scraping s failed
+[2022-05-27 14:22:52,465] INFO: Processing #112/206
+[2022-05-27 14:22:52,465] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,466] INFO: Scraping - failed
+[2022-05-27 14:22:52,467] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,468] INFO: Scraping S failed
+[2022-05-27 14:22:52,468] INFO: Processing #114/206
+[2022-05-27 14:22:52,469] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,470] INFO: Scraping u failed
+[2022-05-27 14:22:52,470] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,471] INFO: Scraping b failed
+[2022-05-27 14:22:52,472] INFO: Processing #116/206
+[2022-05-27 14:22:52,472] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,473] INFO: Scraping m failed
+[2022-05-27 14:22:52,473] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,474] INFO: Scraping i failed
+[2022-05-27 14:22:52,474] INFO: Processing #118/206
+[2022-05-27 14:22:52,475] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,475] INFO: Scraping t failed
+[2022-05-27 14:22:52,476] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,477] INFO: Scraping . failed
+[2022-05-27 14:22:52,477] INFO: Processing #120/206
+[2022-05-27 14:22:52,478] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,478] INFO: Scraping y failed
+[2022-05-27 14:22:52,479] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,479] INFO: Scraping = failed
+[2022-05-27 14:22:52,480] INFO: Processing #122/206
+[2022-05-27 14:22:52,480] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,481] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,481] ERROR: No source is configured for 0... skipping
+[2022-05-27 14:22:52,482] INFO: Scraping 0 failed
+[2022-05-27 14:22:52,483] INFO: Processing #124/206
+[2022-05-27 14:22:52,483] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,484] INFO: Scraping & failed
+[2022-05-27 14:22:52,484] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,485] INFO: Scraping f failed
+[2022-05-27 14:22:52,485] INFO: Processing #126/206
+[2022-05-27 14:22:52,486] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,486] INFO: Scraping i failed
+[2022-05-27 14:22:52,487] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,488] INFO: Scraping e failed
+[2022-05-27 14:22:52,488] INFO: Processing #128/206
+[2022-05-27 14:22:52,489] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,489] INFO: Scraping l failed
+[2022-05-27 14:22:52,490] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,491] INFO: Scraping d failed
+[2022-05-27 14:22:52,491] INFO: Processing #130/206
+[2022-05-27 14:22:52,492] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,492] INFO: Scraping - failed
+[2022-05-27 14:22:52,493] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,493] INFO: Scraping d failed
+[2022-05-27 14:22:52,494] INFO: Processing #132/206
+[2022-05-27 14:22:52,494] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,495] INFO: Scraping a failed
+[2022-05-27 14:22:52,496] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,496] INFO: Scraping t failed
+[2022-05-27 14:22:52,497] INFO: Processing #134/206
+[2022-05-27 14:22:52,497] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,498] INFO: Scraping e failed
+[2022-05-27 14:22:52,498] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,499] INFO: Scraping m failed
+[2022-05-27 14:22:52,500] INFO: Processing #136/206
+[2022-05-27 14:22:52,500] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,501] INFO: Scraping o failed
+[2022-05-27 14:22:52,503] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,504] INFO: Scraping d failed
+[2022-05-27 14:22:52,505] INFO: Processing #138/206
+[2022-05-27 14:22:52,505] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,506] INFO: Scraping = failed
+[2022-05-27 14:22:52,507] ERROR: No source is configured for 5... skipping
+[2022-05-27 14:22:52,507] INFO: Scraping 5 failed
+[2022-05-27 14:22:52,508] INFO: Processing #140/206
+[2022-05-27 14:22:52,508] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,509] INFO: Scraping & failed
+[2022-05-27 14:22:52,510] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,510] INFO: Scraping f failed
+[2022-05-27 14:22:52,511] INFO: Processing #142/206
+[2022-05-27 14:22:52,511] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,512] INFO: Scraping i failed
+[2022-05-27 14:22:52,512] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,513] INFO: Scraping e failed
+[2022-05-27 14:22:52,514] INFO: Processing #144/206
+[2022-05-27 14:22:52,514] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,515] INFO: Scraping l failed
+[2022-05-27 14:22:52,515] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,516] INFO: Scraping d failed
+[2022-05-27 14:22:52,516] INFO: Processing #146/206
+[2022-05-27 14:22:52,517] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,518] INFO: Scraping - failed
+[2022-05-27 14:22:52,519] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,520] INFO: Scraping d failed
+[2022-05-27 14:22:52,521] INFO: Processing #148/206
+[2022-05-27 14:22:52,521] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,522] INFO: Scraping a failed
+[2022-05-27 14:22:52,522] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,523] INFO: Scraping t failed
+[2022-05-27 14:22:52,523] INFO: Processing #150/206
+[2022-05-27 14:22:52,524] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,525] INFO: Scraping e failed
+[2022-05-27 14:22:52,525] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,526] INFO: Scraping o failed
+[2022-05-27 14:22:52,526] INFO: Processing #152/206
+[2022-05-27 14:22:52,527] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,527] INFO: Scraping p failed
+[2022-05-27 14:22:52,528] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,529] INFO: Scraping = failed
+[2022-05-27 14:22:52,529] INFO: Processing #154/206
+[2022-05-27 14:22:52,530] ERROR: No source is configured for D... skipping
+[2022-05-27 14:22:52,530] INFO: Scraping D failed
+[2022-05-27 14:22:52,531] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,531] INFO: Scraping u failed
+[2022-05-27 14:22:52,532] INFO: Processing #156/206
+[2022-05-27 14:22:52,532] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,533] INFO: Scraping r failed
+[2022-05-27 14:22:52,534] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,535] INFO: Scraping i failed
+[2022-05-27 14:22:52,535] INFO: Processing #158/206
+[2022-05-27 14:22:52,536] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,537] INFO: Scraping n failed
+[2022-05-27 14:22:52,538] ERROR: No source is configured for g... skipping
+[2022-05-27 14:22:52,538] INFO: Scraping g failed
+[2022-05-27 14:22:52,539] INFO: Processing #160/206
+[2022-05-27 14:22:52,539] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,540] INFO: Scraping & failed
+[2022-05-27 14:22:52,541] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,541] INFO: Scraping f failed
+[2022-05-27 14:22:52,542] INFO: Processing #162/206
+[2022-05-27 14:22:52,542] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,543] INFO: Scraping i failed
+[2022-05-27 14:22:52,543] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,544] INFO: Scraping e failed
+[2022-05-27 14:22:52,544] INFO: Processing #164/206
+[2022-05-27 14:22:52,545] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,545] INFO: Scraping l failed
+[2022-05-27 14:22:52,546] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,547] INFO: Scraping d failed
+[2022-05-27 14:22:52,547] INFO: Processing #166/206
+[2022-05-27 14:22:52,548] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,548] INFO: Scraping - failed
+[2022-05-27 14:22:52,549] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,549] INFO: Scraping d failed
+[2022-05-27 14:22:52,550] INFO: Processing #168/206
+[2022-05-27 14:22:52,551] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,552] INFO: Scraping a failed
+[2022-05-27 14:22:52,552] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,553] INFO: Scraping t failed
+[2022-05-27 14:22:52,554] INFO: Processing #170/206
+[2022-05-27 14:22:52,554] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,555] INFO: Scraping e failed
+[2022-05-27 14:22:52,556] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,556] INFO: Scraping y failed
+[2022-05-27 14:22:52,557] INFO: Processing #172/206
+[2022-05-27 14:22:52,557] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,558] INFO: Scraping e failed
+[2022-05-27 14:22:52,558] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,559] INFO: Scraping a failed
+[2022-05-27 14:22:52,560] INFO: Processing #174/206
+[2022-05-27 14:22:52,560] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,561] INFO: Scraping r failed
+[2022-05-27 14:22:52,561] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,562] INFO: Scraping = failed
+[2022-05-27 14:22:52,562] INFO: Processing #176/206
+[2022-05-27 14:22:52,563] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,563] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,564] ERROR: No source is configured for 0... skipping
+[2022-05-27 14:22:52,564] INFO: Scraping 0 failed
+[2022-05-27 14:22:52,565] INFO: Processing #178/206
+[2022-05-27 14:22:52,565] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,566] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,567] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,568] INFO: Scraping 2 failed
+[2022-05-27 14:22:52,568] INFO: Processing #180/206
+[2022-05-27 14:22:52,569] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,570] INFO: Scraping & failed
+[2022-05-27 14:22:52,570] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,571] INFO: Scraping u failed
+[2022-05-27 14:22:52,572] INFO: Processing #182/206
+[2022-05-27 14:22:52,572] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,573] INFO: Scraping n failed
+[2022-05-27 14:22:52,574] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,574] INFO: Scraping f failed
+[2022-05-27 14:22:52,575] INFO: Processing #184/206
+[2022-05-27 14:22:52,575] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,576] INFO: Scraping i failed
+[2022-05-27 14:22:52,576] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,577] INFO: Scraping l failed
+[2022-05-27 14:22:52,577] INFO: Processing #186/206
+[2022-05-27 14:22:52,578] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,578] INFO: Scraping t failed
+[2022-05-27 14:22:52,579] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,580] INFO: Scraping e failed
+[2022-05-27 14:22:52,580] INFO: Processing #188/206
+[2022-05-27 14:22:52,581] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,581] INFO: Scraping r failed
+[2022-05-27 14:22:52,582] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,582] INFO: Scraping e failed
+[2022-05-27 14:22:52,583] INFO: Processing #190/206
+[2022-05-27 14:22:52,583] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,584] INFO: Scraping d failed
+[2022-05-27 14:22:52,585] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,586] INFO: Scraping = failed
+[2022-05-27 14:22:52,587] INFO: Processing #192/206
+[2022-05-27 14:22:52,587] ERROR: No source is configured for 1... skipping
+[2022-05-27 14:22:52,588] INFO: Scraping 1 failed
+[2022-05-27 14:22:52,589] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,589] INFO: Scraping & failed
+[2022-05-27 14:22:52,590] INFO: Processing #194/206
+[2022-05-27 14:22:52,590] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,591] INFO: Scraping r failed
+[2022-05-27 14:22:52,591] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,592] INFO: Scraping e failed
+[2022-05-27 14:22:52,593] INFO: Processing #196/206
+[2022-05-27 14:22:52,593] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,594] INFO: Scraping f failed
+[2022-05-27 14:22:52,594] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,595] INFO: Scraping = failed
+[2022-05-27 14:22:52,595] INFO: Processing #198/206
+[2022-05-27 14:22:52,596] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,596] INFO: Scraping s failed
+[2022-05-27 14:22:52,597] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,598] INFO: Scraping r failed
+[2022-05-27 14:22:52,598] INFO: Processing #200/206
+[2022-05-27 14:22:52,599] ERROR: No source is configured for _... skipping
+[2022-05-27 14:22:52,599] INFO: Scraping _ failed
+[2022-05-27 14:22:52,600] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,601] INFO: Scraping a failed
+[2022-05-27 14:22:52,602] INFO: Processing #202/206
+[2022-05-27 14:22:52,602] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,603] INFO: Scraping d failed
+[2022-05-27 14:22:52,604] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,605] INFO: Scraping v failed
+[2022-05-27 14:22:52,605] INFO: Processing #204/206
+[2022-05-27 14:22:52,606] ERROR: No source is configured for _... skipping
+[2022-05-27 14:22:52,606] INFO: Scraping _ failed
+[2022-05-27 14:22:52,607] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,607] INFO: Scraping b failed
+[2022-05-27 14:22:52,608] INFO: Processing #206/206
+[2022-05-27 16:20:20,395] ERROR: No source is configured for h... skipping
+[2022-05-27 16:20:20,395] INFO: Scraping h failed
+[2022-05-27 16:20:20,396] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,396] INFO: Scraping t failed
+[2022-05-27 16:20:20,396] INFO: Processing #2/62
+[2022-05-27 16:20:20,396] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,396] INFO: Scraping t failed
+[2022-05-27 16:20:20,396] ERROR: No source is configured for p... skipping
+[2022-05-27 16:20:20,397] INFO: Scraping p failed
+[2022-05-27 16:20:20,397] INFO: Processing #4/62
+[2022-05-27 16:20:20,397] ERROR: No source is configured for :... skipping
+[2022-05-27 16:20:20,397] INFO: Scraping : failed
+[2022-05-27 16:20:20,397] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,397] INFO: Scraping / failed
+[2022-05-27 16:20:20,398] INFO: Processing #6/62
+[2022-05-27 16:20:20,398] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,398] INFO: Scraping / failed
+[2022-05-27 16:20:20,398] ERROR: No source is configured for a... skipping
+[2022-05-27 16:20:20,398] INFO: Scraping a failed
+[2022-05-27 16:20:20,398] INFO: Processing #8/62
+[2022-05-27 16:20:20,398] ERROR: No source is configured for p... skipping
+[2022-05-27 16:20:20,399] INFO: Scraping p failed
+[2022-05-27 16:20:20,399] ERROR: No source is configured for i... skipping
+[2022-05-27 16:20:20,399] INFO: Scraping i failed
+[2022-05-27 16:20:20,399] INFO: Processing #10/62
+[2022-05-27 16:20:20,399] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,399] INFO: Scraping . failed
+[2022-05-27 16:20:20,400] ERROR: No source is configured for c... skipping
+[2022-05-27 16:20:20,400] INFO: Scraping c failed
+[2022-05-27 16:20:20,400] INFO: Processing #12/62
+[2022-05-27 16:20:20,400] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,400] INFO: Scraping r failed
+[2022-05-27 16:20:20,400] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,401] INFO: Scraping o failed
+[2022-05-27 16:20:20,401] INFO: Processing #14/62
+[2022-05-27 16:20:20,401] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,401] INFO: Scraping s failed
+[2022-05-27 16:20:20,401] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,401] INFO: Scraping s failed
+[2022-05-27 16:20:20,401] INFO: Processing #16/62
+[2022-05-27 16:20:20,402] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,402] INFO: Scraping r failed
+[2022-05-27 16:20:20,402] ERROR: No source is configured for e... skipping
+[2022-05-27 16:20:20,402] INFO: Scraping e failed
+[2022-05-27 16:20:20,403] INFO: Processing #18/62
+[2022-05-27 16:20:20,403] ERROR: No source is configured for f... skipping
+[2022-05-27 16:20:20,403] INFO: Scraping f failed
+[2022-05-27 16:20:20,403] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,403] INFO: Scraping . failed
+[2022-05-27 16:20:20,403] INFO: Processing #20/62
+[2022-05-27 16:20:20,403] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,404] INFO: Scraping o failed
+[2022-05-27 16:20:20,404] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,404] INFO: Scraping r failed
+[2022-05-27 16:20:20,404] INFO: Processing #22/62
+[2022-05-27 16:20:20,404] ERROR: No source is configured for g... skipping
+[2022-05-27 16:20:20,404] INFO: Scraping g failed
+[2022-05-27 16:20:20,405] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,405] INFO: Scraping / failed
+[2022-05-27 16:20:20,405] INFO: Processing #24/62
+[2022-05-27 16:20:20,405] ERROR: No source is configured for w... skipping
+[2022-05-27 16:20:20,405] INFO: Scraping w failed
+[2022-05-27 16:20:20,405] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,406] INFO: Scraping o failed
+[2022-05-27 16:20:20,406] INFO: Processing #26/62
+[2022-05-27 16:20:20,406] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,406] INFO: Scraping r failed
+[2022-05-27 16:20:20,406] ERROR: No source is configured for k... skipping
+[2022-05-27 16:20:20,406] INFO: Scraping k failed
+[2022-05-27 16:20:20,406] INFO: Processing #28/62
+[2022-05-27 16:20:20,407] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,407] INFO: Scraping s failed
+[2022-05-27 16:20:20,407] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,407] INFO: Scraping / failed
+[2022-05-27 16:20:20,407] INFO: Processing #30/62
+[2022-05-27 16:20:20,407] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,408] INFO: Scraping 1 failed
+[2022-05-27 16:20:20,408] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,408] INFO: Scraping 0 failed
+[2022-05-27 16:20:20,408] INFO: Processing #32/62
+[2022-05-27 16:20:20,408] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,408] INFO: Scraping . failed
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,409] INFO: Scraping 1 failed
+[2022-05-27 16:20:20,409] INFO: Processing #34/62
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 5... skipping
+[2022-05-27 16:20:20,409] INFO: Scraping 5 failed
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 9... skipping
+[2022-05-27 16:20:20,409] INFO: Scraping 9 failed
+[2022-05-27 16:20:20,410] INFO: Processing #36/62
+[2022-05-27 16:20:20,410] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,410] INFO: Scraping 0 failed
+[2022-05-27 16:20:20,410] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,410] INFO: Scraping / failed
+[2022-05-27 16:20:20,410] INFO: Processing #38/62
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,411] INFO: Scraping 1 failed
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 9... skipping
+[2022-05-27 16:20:20,411] INFO: Scraping 9 failed
+[2022-05-27 16:20:20,411] INFO: Processing #40/62
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 8... skipping
+[2022-05-27 16:20:20,412] INFO: Scraping 8 failed
+[2022-05-27 16:20:20,412] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,412] INFO: Scraping 2 failed
+[2022-05-27 16:20:20,412] INFO: Processing #42/62
+[2022-05-27 16:20:20,412] ERROR: No source is configured for -... skipping
+[2022-05-27 16:20:20,412] INFO: Scraping - failed
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,413] INFO: Scraping 3 failed
+[2022-05-27 16:20:20,413] INFO: Processing #44/62
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 5... skipping
+[2022-05-27 16:20:20,413] INFO: Scraping 5 failed
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,414] INFO: Scraping 3 failed
+[2022-05-27 16:20:20,414] INFO: Processing #46/62
+[2022-05-27 16:20:20,414] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,414] INFO: Scraping 3 failed
+[2022-05-27 16:20:20,414] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,414] INFO: Scraping . failed
+[2022-05-27 16:20:20,414] INFO: Processing #48/62
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,415] INFO: Scraping 2 failed
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,415] INFO: Scraping 0 failed
+[2022-05-27 16:20:20,415] INFO: Processing #50/62
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,416] INFO: Scraping 2 failed
+[2022-05-27 16:20:20,416] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,416] INFO: Scraping 2 failed
+[2022-05-27 16:20:20,416] INFO: Processing #52/62
+[2022-05-27 16:20:20,416] ERROR: No source is configured for v... skipping
+[2022-05-27 16:20:20,416] INFO: Scraping v failed
+[2022-05-27 16:20:20,417] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,417] INFO: Scraping 3 failed
+[2022-05-27 16:20:20,417] INFO: Processing #54/62
+[2022-05-27 16:20:20,417] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,417] INFO: Scraping 1 failed
+[2022-05-27 16:20:20,417] ERROR: No source is configured for n... skipping
+[2022-05-27 16:20:20,418] INFO: Scraping n failed
+[2022-05-27 16:20:20,418] INFO: Processing #56/62
+[2022-05-27 16:20:20,418] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,418] INFO: Scraping 1 failed
+[2022-05-27 16:20:20,418] ERROR: No source is configured for a... skipping
+[2022-05-27 16:20:20,418] INFO: Scraping a failed
+[2022-05-27 16:20:20,418] INFO: Processing #58/62
+[2022-05-27 16:20:20,419] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,419] INFO: Scraping r failed
+[2022-05-27 16:20:20,419] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,419] INFO: Scraping t failed
+[2022-05-27 16:20:20,419] INFO: Processing #60/62
+[2022-05-27 16:20:20,419] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,420] INFO: Scraping 0 failed
+[2022-05-27 16:20:20,420] ERROR: No source is configured for 8... skipping
+[2022-05-27 16:20:20,420] INFO: Scraping 8 failed
+[2022-05-27 16:20:20,420] INFO: Processing #62/62
+[2022-05-27 16:20:39,652] ERROR: No source is configured for http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-27 16:20:39,652] INFO: Scraping http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08 failed
+[2022-05-27 16:45:02,208] INFO: Processing #2/3
+[2022-05-27 16:49:40,273] INFO: Processing #2/3
+[2022-05-27 16:54:01,138] INFO: Processing #2/3
+[2022-05-30 09:45:08,858] INFO: Processing #2/3
+[2022-05-30 09:45:08,859] ERROR: No source is configured for http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-30 09:45:08,859] INFO: Scraping http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08 failed
+[2022-05-30 09:46:37,266] ERROR: No source is configured for https://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-30 09:46:37,267] INFO: Scraping https://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08 failed
+[2022-05-30 10:19:30,990] ERROR: No source is configured for external_url... skipping
+[2022-05-30 10:19:30,990] INFO: Scraping external_url failed
+[2022-05-30 10:19:33,392] INFO: Processing #2/2
+[2022-05-30 10:27:30,305] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/abs/10.1111/dech.12711
+[2022-05-30 10:27:30,306] INFO: Rotating host
+[2022-05-30 10:28:24,063] INFO: Rotating host
+[2022-05-30 10:28:33,724] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:33,724] INFO: Rotating host
+[2022-05-30 10:28:40,392] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:40,393] INFO: Rotating host
+[2022-05-30 10:28:48,761] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:48,762] INFO: Rotating host
+[2022-05-30 10:28:51,867] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:51,867] INFO: Rotating host
+[2022-05-30 10:28:51,874] INFO: Processing #2/2
+[2022-05-30 10:33:10,066] INFO: Rotating host
+[2022-05-30 10:33:42,002] INFO: Rotating host
+[2022-05-30 10:33:48,180] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:33:48,180] INFO: Rotating host
+[2022-05-30 10:34:54,839] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:34:54,841] INFO: Rotating host
+[2022-05-30 10:35:04,231] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:35:04,232] INFO: Rotating host
+[2022-05-30 10:37:01,867] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:37:01,868] INFO: Rotating host
+[2022-05-30 10:37:21,643] INFO: Processing #2/2
+[2022-05-30 10:46:31,258] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 10:46:31,258] INFO: Rotating host
+[2022-05-30 10:48:07,731] INFO: timeout: Timed out receiving message from renderer: 12.202
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 10:48:07,732] INFO: Rotating host
+[2022-05-30 10:48:23,025] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 10:48:23,026] INFO: Rotating host
+[2022-05-30 10:48:28,979] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:48:28,980] INFO: Rotating host
+[2022-05-30 10:48:35,980] INFO: Processing #2/2
+[2022-05-30 10:49:11,093] ERROR: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:49:11,094] INFO: Rotating host
+[2022-05-30 10:50:27,183] ERROR: timeout: Timed out receiving message from renderer: 6.593
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:50:27,183] INFO: Rotating host
+[2022-05-30 10:56:04,545] ERROR: timeout: Timed out receiving message from renderer: 9.712
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:56:04,557] INFO: Rotating host
+[2022-05-30 10:56:11,373] INFO: CAPTCHA HIT - please solve. Hit any key when done
+[2022-05-30 10:56:22,183] INFO: Processing #2/2
+[2022-05-30 10:57:15,826] INFO: CAPTCHA HIT - please solve. Hit any key when done
+[2022-05-30 10:58:08,085] INFO: Loading....
+[2022-05-30 10:58:09,187] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/abs/10.1111/dech.12711
+[2022-05-30 10:58:09,188] INFO: Rotating host
+[2022-05-30 10:58:17,282] INFO: CAPTCHA HIT - please solve. Hit any key when done
+[2022-05-30 10:58:19,110] INFO: Loading....
+[2022-05-30 10:58:20,441] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 10:58:20,442] INFO: Rotating host
+[2022-05-30 11:04:21,773] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-30 11:04:21,774] INFO: Rotating host
+[2022-05-30 11:04:25,576] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-30 11:04:25,577] INFO: Rotating host
+[2022-05-30 11:06:50,657] ERROR: timeout: Timed out receiving message from renderer: 12.166
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:06:50,658] INFO: Rotating host
+[2022-05-30 11:28:54,523] INFO: Rotating host
+[2022-05-30 11:29:12,053] ERROR: timeout: Timed out receiving message from renderer: 13.504
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:29:12,054] INFO: Rotating host
+[2022-05-30 11:29:17,687] INFO: Rotating host
+[2022-05-30 11:29:25,694] INFO: Rotating host
+[2022-05-30 11:31:17,368] INFO: Rotating host
+[2022-05-30 11:31:26,443] INFO: Rotating host
+[2022-05-30 11:31:31,799] INFO: Rotating host
+[2022-05-30 11:31:48,253] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:31:48,253] INFO: Rotating host
+[2022-05-30 11:48:54,987] ERROR: Driver instances cannot be run in parallel... CRITICAL - QUITTING
+[2022-05-30 11:49:23,293] INFO: Processing #2/2
+[2022-05-30 11:50:41,017] INFO: Processing #2/2

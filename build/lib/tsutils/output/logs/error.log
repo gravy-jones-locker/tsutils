@@ -1,0 +1,347 @@
+[2022-05-13 13:52:19,035] ERROR: hello
+[2022-05-13 13:53:38,431] ERROR: hello
+[2022-05-13 13:54:55,486] ERROR: ()
+[2022-05-17 14:51:53,477] ERROR: ('No requests were made to https://asdf.asdfjdjjkkk/',)
+[2022-05-17 14:57:10,128] ERROR: ('No requests were made to https://asdf.asdfjdjjkkk/',)
+[2022-05-17 14:57:46,940] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:01:08,199] ERROR: 
+[2022-05-17 15:01:26,103] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:01:26,109] ERROR: ... skipping
+[2022-05-17 15:02:37,416] ERROR: No requests were made to https://asdf.asdfjdjjkkk/
+[2022-05-17 15:02:37,421] ERROR: https://asdf.asdfjdjjkkk/... skipping
+[2022-05-18 14:58:49,415] ERROR: 503 raised while requesting https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-18 15:18:03,628] ERROR: No requests made to (https://asdfs.bbboadfa/)
+[2022-05-18 15:18:03,640] ERROR: https://asdfs.bbboadfa/... skipping
+[2022-05-18 15:18:32,192] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:18:32,197] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-18 15:19:00,592] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:19:00,620] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-18 15:20:03,169] ERROR: No requests made to (https://asdfsasdgajbjkooooo.com/)
+[2022-05-18 15:20:21,301] ERROR: https://asdfsasdgajbjkooooo.com/... skipping
+[2022-05-23 12:00:54,375] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 12:58:26,507] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 13:02:50,279] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 13:52:28,986] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:03:57,050] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,802] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,803] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:14,816] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 14:05:15,203] ERROR: 503 raised requesting https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 15:38:07,097] ERROR: No requests could be made to https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-23 15:38:11,367] ERROR: No requests could be made to https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b
+[2022-05-26 16:11:59,899] ERROR: No source is configured for https://google.com
+[2022-05-26 16:12:41,765] ERROR: No source is configured for https://google.com
+[2022-05-26 16:44:40,864] ERROR: //div could not be resolved into a string... skipping
+[2022-05-26 16:45:15,014] ERROR: //div could not be resolved into a string... skipping
+[2022-05-27 09:20:24,508] ERROR: No source is configured for https://google.com... skipping
+[2022-05-27 09:22:23,241] ERROR: No source is configured for https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 09:50:16,491] ERROR: Driver instances cannot be run in parallel CRITICAL - QUITTING
+[2022-05-27 09:50:37,821] ERROR: Driver instances cannot be run in parallel... CRITICAL - QUITTING
+[2022-05-27 10:09:30,563] ERROR: Proxy file at adsfvv.gkk not found. Ignoring
+[2022-05-27 11:36:06,133] ERROR: No source is configured for https://www.amazon.com/s?k=%22university+of%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 11:36:06,134] ERROR: No source is configured for https://www.amazon.com/s?k=%22economic%22&i=stripbooks&s=daterank&Adv-Srch-Books-Submit.x=26&Adv-Srch-Books-Submit.y=20&field-datemod=5&field-dateop=During&field-dateyear=2022&unfiltered=1&ref=sr_adv_b... skipping
+[2022-05-27 12:11:27,459] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:29,897] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:32,311] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 12:11:35,045] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-27 14:22:52,292] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,294] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,295] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,297] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,298] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,299] ERROR: No source is configured for :... skipping
+[2022-05-27 14:22:52,301] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,302] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,304] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,305] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,307] ERROR: No source is configured for w... skipping
+[2022-05-27 14:22:52,308] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,310] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,312] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,313] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,314] ERROR: No source is configured for z... skipping
+[2022-05-27 14:22:52,316] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,317] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,320] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,321] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,323] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,324] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,326] ERROR: No source is configured for /... skipping
+[2022-05-27 14:22:52,327] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,328] ERROR: No source is configured for ?... skipping
+[2022-05-27 14:22:52,330] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,331] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,332] ERROR: No source is configured for %... skipping
+[2022-05-27 14:22:52,334] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,336] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,338] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,339] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,341] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,342] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,343] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,344] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,346] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,347] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,349] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,350] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,351] ERROR: No source is configured for +... skipping
+[2022-05-27 14:22:52,353] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,354] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,355] ERROR: No source is configured for %... skipping
+[2022-05-27 14:22:52,357] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,358] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,360] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,361] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,362] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,364] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,365] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,366] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,368] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,369] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,371] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,372] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,374] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,375] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,376] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,377] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,379] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,380] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,382] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,383] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,385] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,387] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,388] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,390] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,391] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,392] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,394] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,395] ERROR: No source is configured for A... skipping
+[2022-05-27 14:22:52,397] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,398] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,400] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,401] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,403] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,405] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,407] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,409] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,411] ERROR: No source is configured for B... skipping
+[2022-05-27 14:22:52,412] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,413] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,414] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,416] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,417] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,419] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,421] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,423] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,424] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,426] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,427] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,428] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,429] ERROR: No source is configured for x... skipping
+[2022-05-27 14:22:52,431] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,432] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,434] ERROR: No source is configured for 6... skipping
+[2022-05-27 14:22:52,435] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,437] ERROR: No source is configured for A... skipping
+[2022-05-27 14:22:52,439] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,440] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,442] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,450] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,452] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,454] ERROR: No source is configured for c... skipping
+[2022-05-27 14:22:52,455] ERROR: No source is configured for h... skipping
+[2022-05-27 14:22:52,457] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,458] ERROR: No source is configured for B... skipping
+[2022-05-27 14:22:52,460] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,461] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,463] ERROR: No source is configured for k... skipping
+[2022-05-27 14:22:52,464] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,465] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,467] ERROR: No source is configured for S... skipping
+[2022-05-27 14:22:52,469] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,470] ERROR: No source is configured for b... skipping
+[2022-05-27 14:22:52,472] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,473] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,475] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,476] ERROR: No source is configured for .... skipping
+[2022-05-27 14:22:52,478] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,479] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,480] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,481] ERROR: No source is configured for 0... skipping
+[2022-05-27 14:22:52,483] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,484] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,486] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,487] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,489] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,490] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,492] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,493] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,494] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,496] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,497] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,498] ERROR: No source is configured for m... skipping
+[2022-05-27 14:22:52,500] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,503] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,505] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,507] ERROR: No source is configured for 5... skipping
+[2022-05-27 14:22:52,508] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,510] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,511] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,512] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,514] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,515] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,517] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,519] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,521] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,522] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,524] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,525] ERROR: No source is configured for o... skipping
+[2022-05-27 14:22:52,527] ERROR: No source is configured for p... skipping
+[2022-05-27 14:22:52,528] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,530] ERROR: No source is configured for D... skipping
+[2022-05-27 14:22:52,531] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,532] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,534] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,536] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,538] ERROR: No source is configured for g... skipping
+[2022-05-27 14:22:52,539] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,541] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,542] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,543] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,545] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,546] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,548] ERROR: No source is configured for -... skipping
+[2022-05-27 14:22:52,549] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,551] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,552] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,554] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,556] ERROR: No source is configured for y... skipping
+[2022-05-27 14:22:52,557] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,558] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,560] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,561] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,563] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,564] ERROR: No source is configured for 0... skipping
+[2022-05-27 14:22:52,565] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,567] ERROR: No source is configured for 2... skipping
+[2022-05-27 14:22:52,569] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,570] ERROR: No source is configured for u... skipping
+[2022-05-27 14:22:52,572] ERROR: No source is configured for n... skipping
+[2022-05-27 14:22:52,574] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,575] ERROR: No source is configured for i... skipping
+[2022-05-27 14:22:52,576] ERROR: No source is configured for l... skipping
+[2022-05-27 14:22:52,578] ERROR: No source is configured for t... skipping
+[2022-05-27 14:22:52,579] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,581] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,582] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,583] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,585] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,587] ERROR: No source is configured for 1... skipping
+[2022-05-27 14:22:52,589] ERROR: No source is configured for &... skipping
+[2022-05-27 14:22:52,590] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,591] ERROR: No source is configured for e... skipping
+[2022-05-27 14:22:52,593] ERROR: No source is configured for f... skipping
+[2022-05-27 14:22:52,594] ERROR: No source is configured for =... skipping
+[2022-05-27 14:22:52,596] ERROR: No source is configured for s... skipping
+[2022-05-27 14:22:52,597] ERROR: No source is configured for r... skipping
+[2022-05-27 14:22:52,599] ERROR: No source is configured for _... skipping
+[2022-05-27 14:22:52,600] ERROR: No source is configured for a... skipping
+[2022-05-27 14:22:52,602] ERROR: No source is configured for d... skipping
+[2022-05-27 14:22:52,604] ERROR: No source is configured for v... skipping
+[2022-05-27 14:22:52,606] ERROR: No source is configured for _... skipping
+[2022-05-27 14:22:52,607] ERROR: No source is configured for b... skipping
+[2022-05-27 16:20:20,395] ERROR: No source is configured for h... skipping
+[2022-05-27 16:20:20,396] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,396] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,396] ERROR: No source is configured for p... skipping
+[2022-05-27 16:20:20,397] ERROR: No source is configured for :... skipping
+[2022-05-27 16:20:20,397] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,398] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,398] ERROR: No source is configured for a... skipping
+[2022-05-27 16:20:20,398] ERROR: No source is configured for p... skipping
+[2022-05-27 16:20:20,399] ERROR: No source is configured for i... skipping
+[2022-05-27 16:20:20,399] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,400] ERROR: No source is configured for c... skipping
+[2022-05-27 16:20:20,400] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,400] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,401] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,401] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,402] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,402] ERROR: No source is configured for e... skipping
+[2022-05-27 16:20:20,403] ERROR: No source is configured for f... skipping
+[2022-05-27 16:20:20,403] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,403] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,404] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,404] ERROR: No source is configured for g... skipping
+[2022-05-27 16:20:20,405] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,405] ERROR: No source is configured for w... skipping
+[2022-05-27 16:20:20,405] ERROR: No source is configured for o... skipping
+[2022-05-27 16:20:20,406] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,406] ERROR: No source is configured for k... skipping
+[2022-05-27 16:20:20,407] ERROR: No source is configured for s... skipping
+[2022-05-27 16:20:20,407] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,407] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,408] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,408] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 5... skipping
+[2022-05-27 16:20:20,409] ERROR: No source is configured for 9... skipping
+[2022-05-27 16:20:20,410] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,410] ERROR: No source is configured for /... skipping
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 9... skipping
+[2022-05-27 16:20:20,411] ERROR: No source is configured for 8... skipping
+[2022-05-27 16:20:20,412] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,412] ERROR: No source is configured for -... skipping
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 5... skipping
+[2022-05-27 16:20:20,413] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,414] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,414] ERROR: No source is configured for .... skipping
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,415] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,416] ERROR: No source is configured for 2... skipping
+[2022-05-27 16:20:20,416] ERROR: No source is configured for v... skipping
+[2022-05-27 16:20:20,417] ERROR: No source is configured for 3... skipping
+[2022-05-27 16:20:20,417] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,417] ERROR: No source is configured for n... skipping
+[2022-05-27 16:20:20,418] ERROR: No source is configured for 1... skipping
+[2022-05-27 16:20:20,418] ERROR: No source is configured for a... skipping
+[2022-05-27 16:20:20,419] ERROR: No source is configured for r... skipping
+[2022-05-27 16:20:20,419] ERROR: No source is configured for t... skipping
+[2022-05-27 16:20:20,419] ERROR: No source is configured for 0... skipping
+[2022-05-27 16:20:20,420] ERROR: No source is configured for 8... skipping
+[2022-05-27 16:20:39,652] ERROR: No source is configured for http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-30 09:45:08,859] ERROR: No source is configured for http://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-30 09:46:37,266] ERROR: No source is configured for https://api.crossref.org/works/10.1590/1982-3533.2022v31n1art08... skipping
+[2022-05-30 10:19:30,990] ERROR: No source is configured for external_url... skipping
+[2022-05-30 10:27:30,305] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/abs/10.1111/dech.12711
+[2022-05-30 10:28:33,724] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:40,392] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:48,761] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:28:51,867] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:33:48,180] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:34:54,839] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:35:04,231] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:37:01,867] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:46:31,258] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 10:48:23,025] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 10:48:28,979] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/imig.13019
+[2022-05-30 10:49:11,093] ERROR: timeout: Timed out receiving message from renderer: -0.002
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:50:27,183] ERROR: timeout: Timed out receiving message from renderer: 6.593
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:56:04,545] ERROR: timeout: Timed out receiving message from renderer: 9.712
+  (Session info: chrome=102.0.5005.49)
+[2022-05-30 10:58:09,187] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/abs/10.1111/dech.12711
+[2022-05-30 10:58:20,441] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/full/10.1111/dech.12711
+[2022-05-30 11:04:21,773] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-30 11:04:25,576] ERROR: Captcha hit on https://onlinelibrary.wiley.com/doi/10.1111/petr.14281
+[2022-05-30 11:06:50,657] ERROR: timeout: Timed out receiving message from renderer: 12.166
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:29:12,053] ERROR: timeout: Timed out receiving message from renderer: 13.504
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:31:48,253] ERROR: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+  (Session info: headless chrome=102.0.5005.49)
+[2022-05-30 11:48:54,987] ERROR: Driver instances cannot be run in parallel... CRITICAL - QUITTING
