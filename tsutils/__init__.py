@@ -2,6 +2,8 @@ from pathlib import Path
 
 ROOT_DIR = str(Path(__file__).absolute().parents[0])
 
+__version__ = '0.2'
+
 import sys
 import os
 
