@@ -257,6 +257,7 @@ class DefensiveSource(Source):
                 incognito=True,
                 post_load_wait=5,
                 proxy_file=self.proxy_file,
+                proxy_type='static',
                 headless=not self.guided_initialisation)
         return self._driver
 
