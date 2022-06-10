@@ -103,6 +103,7 @@ class Requester(Scraper):
         :return: the Response object returned from the URL.
         """
         kwargs = self._get_kwargs(self.host, kwargs)
+
         try:  # SSLErrors are sometimes raised when using CloudScraper
             resp = self.sess.get(url, **kwargs)
         except requests.exceptions.SSLError:
@@ -133,22 +134,39 @@ class Requester(Scraper):
         self._host = next(self._hosts)
     
     def _configure_pool(self) -> Pool:
-        return Pool(
+        return Pool.setup(
             num_threads=self._settings["num_threads"],
             stop_early=True,
             raise_errs=False,
             log_step=0)
 
-class APIRequester(Requester):
+class StaticRequester(Requester):
     """
-    The APIRequester interface is a replica of the usual Requester class with
-    different presets/defaults.
+    The StaticRequester interface is replica of the usual Requester
+    class for sources which prefer a static connection.
     """
     defaults = {
         **Requester.defaults,
-        "num_threads": 1,
         "rotate_host": False,
         "spin_hosts": False,
+    }
+
+class DefensiveRequester(StaticRequester):
+    """
+    The DefensiveRequester interface is a subclass of the StaticRequester class
+    for DefensiveSource objects which persist a Selenium session.
+    """
+    defaults = {
+        **StaticRequester.defaults,
+        "request_retries": 3,
+    }
+
+class APIRequester(StaticRequester):
+    """
+    The APIRequester interface is a subclass of the StaticRequester class for
+    APISource objects.
+    """
+    defaults = {
+        **StaticRequester.defaults,
         "content_types": [],
-        "prongs": 1
     }

@@ -16,7 +16,8 @@ from tsutils import ROOT_DIR
 
 logger = logging.getLogger('tsutils')
 
-UAS_FPATH = f'{ROOT_DIR}/input/data/useragents.csv'
+UAS = load_csv(f'{ROOT_DIR}/input/data/useragents.csv', flat=True)
+random.shuffle(UAS)
 
 class Hosts:
     """
@@ -26,8 +27,7 @@ class Hosts:
     proxy_type: str) -> None:
         self._cycle = cycle(
             self._compile_hosts(
-                self._load_proxies(proxy_file, proxy_type),
-                self._load_user_agents()))
+                self._load_proxies(proxy_file, proxy_type), UAS))
     
     def __next__(self) -> Host:
         return next(self._cycle)
@@ -46,24 +46,19 @@ class Hosts:
     
     def _read_proxy_file(self, proxy_file: Union[str, None], 
     proxy_type: str) -> list:
-
+        """
+        Get the data from proxy_file and then filter according to proxy_type.
+        """
         proxies = load_json(proxy_file)
-
-        # If proxy type is specified then remove the alternative type
-        for key in ['rotating', 'static_short', 'static_long']:
-            if proxy_type == key:
-                proxies = {key: proxies[key]}
-        if proxy_type == 'static':
-            proxies = {'static': [*proxies["static_short"], 
-                                  *proxies["static_long"]]}
-
-        return [y for x in proxies.values() for y in x]
-    
-    def _load_user_agents(self) -> list:
-        out = load_csv(UAS_FPATH, flat=True)
-        random.shuffle(out)
+        if proxy_type == 'all':
+            return [y for x in proxies.values() for y in x]
+        
+        out = []  # Do proxy filtering if proxy_type != 'all'
+        for key, value in proxies.items():
+            if key.startswith(proxy_type):
+                out.extend(value)
         return out
-
+    
 class Host:
     """
     Corresponds to a unique proxy/user-agent combination.
@@ -76,9 +71,14 @@ class Host:
 
     def __init__(self, proxy: str, user_agent: str) -> None:
         self.proxy = proxy
-        self.user_agent = user_agent
+        self.user_agent = self._configure_user_agent(user_agent)
         self.proxy_dict = self._build_proxy_dict()
         self.proxy_dict_prefixed = self._build_proxy_dict(prefixed=True)
+    
+    def _configure_user_agent(self, user_agent: str) -> str:
+        if user_agent is None:
+            return UAS[0]
+        return user_agent
     
     def _build_proxy_dict(self, prefixed: bool=False) -> dict:
         out = {"https": self.proxy, "http": self.proxy, "ftp": self.proxy}

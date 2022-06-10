@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import os
 import shutil
+import logging
 
 from seleniumwire import undetected_chromedriver as uc
 from seleniumwire.request import Request
@@ -13,16 +14,15 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import *
 
 from ...common.datautils import update_defaults
-from ...common.exceptions import NotificationError
 from ..models.hosts import Host, LocalHost
 from ..models.response import Response
-from .constants import IMG_EXTENSIONS
+from ..exceptions import NoDriverRequestError
+from .constants import FILE_EXTENSIONS
 from ... import ROOT_DIR
 
-DATA_DIR = f'{ROOT_DIR}/input/data/chrome'
+logger = logging.getLogger('tsutils')
 
-class NoRequestError(NotificationError):
-    pass
+DATA_DIR = f'{ROOT_DIR}/input/data/chrome'
 
 class Chrome(uc.Chrome):
     """
@@ -31,12 +31,12 @@ class Chrome(uc.Chrome):
     """
     defaults = {
         "headless": True,
-        "chromedriver_path": None,
         "incognito": False,
         "page_load_timeout": 15,
         "host": None,
-        "ignore_images": True,
+        "ignore_files": True,
         "ignore_scripts": False,
+        "chrome_version": 102,
         "load_args": [
             '--log-level=2',
             '--no-first-run',
@@ -52,7 +52,7 @@ class Chrome(uc.Chrome):
         """
         self._settings = update_defaults(self.defaults, settings)
         self._init_driver()
-        self._configure_host(settings.get('host', self._settings["host"]))
+        self._configure_host()
         self.request_interceptor = self._intercept_requests
 
     def _init_driver(self) -> None:
@@ -61,8 +61,7 @@ class Chrome(uc.Chrome):
 
     def _configure_init_kwargs(self) -> dict:
         out = {"options": self._configure_options()}
-        if self._settings["chromedriver_path"] is not None:
-            out["executable_path"] = self._settings["chromedriver_path"]
+        out["version_main"] = self._settings["chrome_version"]
         return out
     
     def _configure_options(self) -> uc.ChromeOptions:
@@ -81,10 +80,10 @@ class Chrome(uc.Chrome):
         elif self.host.user_agent is not None:
             del request.headers["User-Agent"]
             request.headers["User-Agent"] = self.host.user_agent
-    
+
     def _ban_request(self, request: Request) -> bool:
-        if self._settings["ignore_images"]:
-            if request.path.endswith(tuple(IMG_EXTENSIONS)):
+        if self._settings["ignore_files"]:
+            if request.path.endswith(tuple(FILE_EXTENSIONS)):
                 return True
         if self._settings["ignore_scripts"]:
             if request.path.endswith('js'):
@@ -121,12 +120,13 @@ class Chrome(uc.Chrome):
             return Response._from_chrome(
                 self._get_main_request(),
                 self.get_cookies())
-        except NoRequestError:
+        except NoDriverRequestError:
+            logger.debug(f'No requests made to {self.current_url} found')
             return Response._from_details(status_code=404, url=self.current_url)
         
     def _configure_host(self, host: Host=None, del_data: bool=False) -> None:
         if host is None:
-            host = LocalHost()
+            host = LocalHost(None)
         self.proxy = host.proxy_dict_prefixed
         self.host  = host
         if del_data:
@@ -136,10 +136,11 @@ class Chrome(uc.Chrome):
         self.delete_all_cookies()
     
     def _get_main_request(self) -> Request:
-        for request in self.requests:
+        for request in reversed(self.requests):
             if self.current_url.startswith(request.url):
                 return request
-        raise NoRequestError(f'No requests could be made to {self.current_url}')
+        raise NoDriverRequestError(
+            f'No requests to {self.current_url} could be found')
     
     @classmethod
     def reset_profile(cls) -> None:

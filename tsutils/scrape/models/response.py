@@ -4,6 +4,8 @@ action (even where it has to be composed..)
 """
 from __future__ import annotations
 
+import time
+
 from requests import Response as RequestsResponse
 from requests.cookies import cookiejar_from_dict, RequestsCookieJar
 from seleniumwire.request import Request as SWRequest
@@ -84,8 +86,10 @@ class Response(RequestsResponse):
     def _load_chrome_cookies(cookies: list) -> RequestsCookieJar:
         out = cookiejar_from_dict({})
         for cookie in cookies:
-            for key in BAD_COOKIE_KEYS & set(cookie.keys()):
+            for key in set(BAD_COOKIE_KEYS) & set(cookie.keys()):
                 cookie.pop(key)
+            if cookie["name"] in out.keys():
+                continue  # Ignore duplicates
             out.set(cookie.pop('name'), cookie.pop('value'), **cookie)
         return out
     

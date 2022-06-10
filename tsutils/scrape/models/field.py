@@ -31,7 +31,7 @@ class Field:
         data = self._get_data(resp)
         for sub_conf in self.conf:
             results = self._process_sub_conf(sub_conf, data)
-            if results is not None:
+            if results:
                 return results
         return []
 

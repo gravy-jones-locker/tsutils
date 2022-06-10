@@ -1,3 +1,3 @@
-from .driver import Driver
-from .requester import Requester, APIRequester
+from .driver import *
+from .requester import *
 from .scraper import Scraper

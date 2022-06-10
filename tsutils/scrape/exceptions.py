@@ -1,32 +1,39 @@
+from requests.exceptions import ProxyError
+
 from ..common.exceptions import *
 
 class ResourceNotFoundError(SkipIterationError):
-    def __init__(self, url: str) -> None:
-        super().__init__(f'Nothing found at {url}')
-
-class PageLoadFailedError(NotificationError):
     pass
 
-class ScrapeFailedError(NotificationError):
+class PageLoadFailedError(Exception):
     pass
 
-class RequestFailedError(QuietError):
-    def __init__(self, msg: str) -> None:
-        super().__init__(f'Request failed - {msg}')
+class ScrapeFailedError(SkipIterationError):
+    pass
 
-class CaptchaHitError(NotificationError):
-    def __init__(self, url: str) -> None:
-        super().__init__(f'Captcha hit on {url}')
+class RequestFailedError(Exception):
+    pass
+
+class CaptchaHitError(Exception):
+    pass
 
 class SourceNotConfiguredError(SkipIterationError):
     pass
 
 class WrongFieldTypeError(SkipIterationError):
-    def __init__(self, xpath) -> None:
-        super().__init__(f'{xpath} could not be resolved into a string')
+    pass
 
 class LiveDriverError(CriticalError):
     pass
 
 class StopScrapeError(StopPoolExecutionError):
     pass
+
+class NoDriverRequestError(Exception):
+    pass
+
+
+PROXY_EXCEPTIONS = (
+    ProxyError,
+    ConnectionResetError,
+)

@@ -61,17 +61,13 @@ class Session:
         :param kwargs: bespoke request arguments.
         :return: a dictionary of values or Result object as per values_only.
         """
-        try:
-            source = self._identify_request_source(url)
-            if fields is None:
-                fields = {}
-            res = source.scrape_url(url, fields, **kwargs)
-            if values_only:
-                res = res.values
-            return res
-        except SourceNotConfiguredError:
-            logger.info(f'Scraping {url} failed')
-            return {}, None
+        source = self._identify_request_source(url)
+        if fields is None:
+            fields = {}
+        res = source.scrape_url(url, fields, **kwargs)
+        if values_only:
+            res = res.values
+        return res
     
     def _identify_request_source(self, url: str) -> Source:
         for source in self.sources:
@@ -81,34 +77,30 @@ class Session:
         raise SourceNotConfiguredError(f'No source is configured for {url}')
     
     def scrape_urls(self, urls: list, fields: dict=None, values_only: bool=True,
-    index: bool=False, num_threads: int=1) -> list:
+    num_threads: int=1) -> list:
         """
         Iterate over urls and return fields/responses as per file config.
         :param urls: a list of urls from which to scrape data.
         :param fields: an individual field config dict.
         :param values_only: toggle value dictionary or Result object outputs.
-        :param index: toggle whether to return an indexed dictionary or list.
         :param num_threads: the number of threads (1 = no parallelisation).
         :return: a dictionary of results indexed by url.
         """
         if num_threads > 1 and self._running_driver():
             raise PoolError('Driver instances cannot be run in parallel')
-        with Pool(num_threads, log_step=num_threads+1, raise_errs=False) as pool:
+        with Pool.setup(num_threads, num_threads+1, False) as pool:
             out = pool.map(
                 self.scrape_url, 
                 [[x, fields, False] for x in urls])
-        return self._parse_mapped_output(out, urls, values_only, index)
+        return self._parse_mapped_output(out, values_only)
     
-    def _parse_mapped_output(self, scraped: list, urls: list, 
-    values_only: bool, index: bool) -> Union[dict, list]:
+    def _parse_mapped_output(self, scraped: list, values_only: bool) -> list:
         out = []
         for result in scraped:
-            if values_only:
+            if values_only and result is not None:
                 result = result.values
             out.append(result)
-        if not index:
-            return out
-        return {urls[i]: x for i, x in enumerate(out)}
+        return out
 
     def _running_driver(self) -> bool:
         return any([isinstance(x, DriverSource) for x in self.sources])

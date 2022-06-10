@@ -10,8 +10,8 @@ packaging = "*"
 lxml = "*"
 undetected-chromedriver = "*"
 cloudscraper = "*"
-tsutils = {path = "."}
 selenium = "*"
+pandas = "*"
 
 [dev-packages]
 

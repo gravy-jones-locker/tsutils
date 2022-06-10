@@ -21,11 +21,13 @@ tsutils/output/logs/.gitkeep
 tsutils/output/logs/concise.log
 tsutils/output/logs/error.log
 tsutils/output/logs/verbose.log
+tsutils/output/logs/verbose.log.1
 tsutils/scrape/__init__.py
 tsutils/scrape/exceptions.py
 tsutils/scrape/session.py
 tsutils/scrape/source.py
 tsutils/scrape/models/__init__.py
+tsutils/scrape/models/client.py
 tsutils/scrape/models/field.py
 tsutils/scrape/models/hosts.py
 tsutils/scrape/models/response.py
@@ -36,3 +38,4 @@ tsutils/scrape/scrapers/scraper.py
 tsutils/scrape/utils/__init__.py
 tsutils/scrape/utils/chrome.py
 tsutils/scrape/utils/constants.py
+tsutils/scrape/utils/functions.py

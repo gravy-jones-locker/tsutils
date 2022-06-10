@@ -6,7 +6,6 @@ import logging
 import time
 
 from typing import Callable
-from bdb import BdbQuit
 
 from ...common.datautils import update_defaults
 from ..models.response import Response
@@ -15,6 +14,8 @@ from ..exceptions import *
 from ..utils.constants import CAPTCHA_STRS
 
 logger = logging.getLogger('tsutils')
+
+CATCH_EXCEPTIONS = (RequestFailedError, *PROXY_EXCEPTIONS)
 
 class Scraper:
     """
@@ -28,7 +29,7 @@ class Scraper:
         "request_retries": 1,
         "request_retry_interval": 1,
         "rotate_host": True,
-        "headers": {}
+        "headers": {},
     }
     class Decorators:
     
@@ -39,15 +40,14 @@ class Scraper:
             output.
             """
             def inner(scraper, url, *args, **kwargs) -> Response:
-                iteration = 0
-                while iteration - 1 < scraper._settings["request_retries"]:
+                it = 0
+                while True:
                     try:
                         resp = func(scraper, url, *args, **kwargs)
                         return scraper._parse_response(resp)
-                    except Exception as e:
-                        scraper._handle_error(e, url, iteration)
-                    time.sleep(scraper._settings["request_retry_interval"])
-                    iteration += 1
+                    except Exception as exc:
+                        it = scraper._handle_error(exc, url, it)
+                        time.sleep(scraper._settings["request_retry_interval"])
             return inner
 
     def __init__(self, **settings) -> None:
@@ -61,31 +61,63 @@ class Scraper:
         raise NotImplementedError
 
     def _parse_response(self, resp: Response) -> Response:
+        """
+        Parse the response for errors - if None found then return.
+        """
+        if self._detect_captcha(resp):
+            logger.debug(f'Hit captcha on {resp.url}')
+            raise CaptchaHitError(f'Captcha hit on {resp.url}')
+
         if resp.status_code == 404:
+            logger.debug(f'404 raised at {resp.url}')
             raise ResourceNotFoundError(resp.url)
 
-        # TODO might want to be able to do redirect handling - need concrete
-        # use case.
-        if self._detect_captcha(resp):
-            resp = self._solve_captcha(resp)
-            if self._detect_captcha(resp):
-                raise CaptchaHitError(resp.url)
-
         if not resp.ok:
+            logger.debug(f'{resp.status_code} raised at {resp.url}')
             raise RequestFailedError(resp.msg)
+
         return resp
-    
-    def _handle_error(self, exc: Exception, url: str, iteration: int) -> None:
-        if isinstance(exc, (KeyboardInterrupt, BdbQuit, ResourceNotFoundError)):
-            raise exc
-        if self._settings["rotate_host"]:
-            logger.debug(f'Rotating host ({exc})')
-            self._rotate_host()
-        if iteration == self._settings["request_retries"]:
-            raise ScrapeFailedError(f'All requests to {url} failed') from exc
 
     def _detect_captcha(self, resp: Response) -> bool:
+        """
+        Look for captcha strings in the response text.
+        """
         captchas = CAPTCHA_STRS + self._settings["captcha_strs"]
         if any([x in resp.text for x in captchas]):
+            return True
+        return False
+    
+    def _handle_error(self, exc: Exception, url: str, it: int) -> int:
+        """
+        Handle any errors raised during a scraping action and return the
+        number of iteration 'tokens' left.
+        """
+        if isinstance(exc, ResourceNotFoundError):
+            raise exc
+
+        if self._stop_scraping(exc, it):
+            logger.debug('Raising ScrapeFailedError', exc_info=1)
+            raise ScrapeFailedError(f'All requests to {url} failed') from exc
+
+        if isinstance(exc, PROXY_EXCEPTIONS):
+            # Give proxy connection errors a bit of time to resolve
+            logger.debug(f'Proxy error connecting to {url}')
+            time.sleep(self._settings["request_retry_interval"])
+
+            return it + 1  # These errors only use up one iteration token...
+
+        if self._settings["rotate_host"]:
+            logger.debug('Rotating host')
+            self._rotate_host()
+        
+        return it + 2  # All other errors use up two iteration tokens
+    
+    def _stop_scraping(self, exc: Exception, it: int) -> bool:
+        """
+        Return True if an Exception has been raised which should stop scraping.
+        """
+        if it >= self._settings["request_retries"] * 2:
+            return True
+        if not isinstance(exc, CATCH_EXCEPTIONS):
             return True
         return False

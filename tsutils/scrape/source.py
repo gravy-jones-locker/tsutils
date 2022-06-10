@@ -7,13 +7,13 @@ from __future__ import annotations
 import re
 import logging
 
-from bdb import BdbQuit
-
 from ..common.datautils import update_defaults
-from .scrapers import Requester, Driver, Scraper, APIRequester
+from ..common.exceptions import ConfigurationError
+from .scrapers import *
 from .exceptions import StopScrapeError, ScrapeFailedError
 from .models.field import HTMLField, APIField
 from .models.response import Response
+from .models.client import Client
 
 logger = logging.getLogger('tsutils')
 
@@ -200,69 +200,73 @@ class DefensiveSource(Source):
 
     Limited retries aim to optimise request/output payoff.
     """
-    _live_session = False
+    _scraper_cls = DefensiveRequester
 
-    _driver = False
-
-    guided_initialisation = False
+    # Cookie, header and host data is stored in a live Client object
+    _live_client = False
 
     wait_xpath = None
 
-    def __init__(self) -> None:
-        super().__init__()
+    proxy_file = None
 
-        self.scraper_settings.update(  # These are needed to hold a session open
-            {"rotate_host": False,
-             "request_retries": 3,
-             "spin_hosts": False,
-             })
+    def __init__(self) -> None:
+        if self.proxy_file is None:
+            raise ConfigurationError(
+                'DefensiveSource requires a proxy_file attribute')
+
+        super().__init__()
+            
+        # Initialise the requester instance on Source construction
+        self.driver = DefensiveDriver.get_or_create(proxy_file=self.proxy_file)
 
     def scrape_url(self, url: str, ad_fields: dict, 
     **kwargs) -> BaseSource.Result:
         """
-        Execute normal scraping flow with appropriate scraper routing.
+        Execute the normal scraping flow with appropriate scraper routing.
+        :param url: the URL to call.
+        :param ad_fields: any additional fields to retrieve.
+        :param kwargs: bespoke request arguments.
+        :return: a Result object compiled from the scrape.
         """
-        if self._live_session is False:
+        if self._live_client is False:
+            # True if not yet configured or last attempt failed
             return self._configure_session(url)
-        
-        # Pass the session cookies in the scraping request
-        kwargs["cookies"] = self._live_session["cookies"]
         try:
+            kwargs["cookies"] = dict(self._live_client.resp.cookies)
+            self.scraper._host = self.driver._chrome.host
             return super().scrape_url(url, ad_fields, **kwargs)
+        except ResourceNotFoundError:
+            return BaseSource.Result(None, {})
         except ScrapeFailedError:
+            logger.debug('', exc_info=1)
             logger.info('Session went down. Reconfiguring')
+
             return self._configure_session(url)
 
-    def _configure_session(self, url: str) -> None:
-        logger.info('Configuring defensive HTML source session')
+    def _configure_session(self, url: str) -> BaseSource.Result:
+        """
+        Attempt navigation to the given URL using the configured Driver
+        instance. If successful then set a new _live_client value from the
+        Driver properties.
+        """
         try:
-            resp = self.driver.get(url, wait_xpath=self.wait_xpath)
-            self._live_session = {
-                "cookies": dict(resp.cookies),
-                "host": self.driver._chrome.host,
-            }
-            logger.error('Session initialisation was successful')
-            self._restart_scraper()
-            return self._parse_response(resp, {})
-        except Exception as exc:
-            if isinstance(exc, (KeyboardInterrupt, BdbQuit)):
-                raise exc
-            logger.error('Session initialisation failed')
-            logger.debug('', exc_info=1)
-            return self._parse_response(None, {})
-    
-    @property
-    def driver(self) -> Driver:
-        if self._driver is False:
-            self._driver = Driver.get_or_create(
-                ignore_scripts=True,
-                request_retries=5,
-                incognito=True,
-                proxy_file=self.proxy_file,
-                proxy_type='static',
-                headless=not self.guided_initialisation)
-        return self._driver
+            logger.info('Configuring defensive HTML source session')
 
-    def _restart_scraper(self) -> None:
-        self._scraper = Requester(**self.scraper_settings)
-        self._scraper._host = self._live_session["host"]
+            self.driver._rotate_host()  # Start from a fresh host every time
+            resp = self.driver.get(url, wait_xpath=self.wait_xpath)
+            
+            # Set new client from driver Response cookies/headers/host
+            self._live_client = Client(resp, self.driver._chrome.host)
+            logger.info('Session initialisation was successful')
+
+            return self._parse_response(resp, {})
+        
+        except ResourceNotFoundError:
+            return BaseSource.Result(None, {})
+
+        except ScrapeFailedError as exc:
+            logger.error(f'Session initialisation failed - {exc}')
+
+            # Unset the _live_client value and return an empty result
+            self._live_client = False
+            return BaseSource.Result(None, {})
