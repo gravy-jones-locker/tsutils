@@ -10,7 +10,6 @@ packaging = "*"
 lxml = "*"
 undetected-chromedriver = "*"
 cloudscraper = "*"
-selenium = "*"
 pandas = "*"
 
 [dev-packages]

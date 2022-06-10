@@ -15,6 +15,5 @@ setup(
         'lxml',
         'undetected-chromedriver',
         'cloudscraper',
-        'selenium'
         ]
 )

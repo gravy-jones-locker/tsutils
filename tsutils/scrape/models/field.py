@@ -33,7 +33,7 @@ class Field:
             results = self._process_sub_conf(sub_conf, data)
             if results:
                 return results
-        return []
+        return None
 
 class HTMLField(Field):
     """

@@ -39,6 +39,20 @@ class BaseSource:
         # Only initialise Scraper class on demand
         self._scraper = False
     
+    @classmethod
+    def old_dict_config(cls, domain: str, **attrs) -> BaseSource:
+        """
+        Configure a source from a dictionary of details DEPRECATED FORMAT.
+        :param domain: the relevant domain string.
+        :param attrs: a mapping containing field_dict and any other attributes.
+        return: an initialised BaseSource object.
+        """
+        out_cls = type(domain.replace('.', '_'), (cls, ), {})
+        out_cls.url_patts = [re.escape(domain)]
+        for attr, value in attrs.items():
+            setattr(out_cls, attr, value)
+        return out_cls
+    
     def _configure_scraper_settings(self) -> None:
         self.scraper_settings = update_defaults(
             self._scraper_cls.defaults, 
