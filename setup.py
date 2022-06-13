@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='tsutils',
-    version=0.25,
+    version=0.3,
     description='Utility bindings for The Syllabus codebase',
     author='The Syllabus',
     packages=find_packages(),
@@ -13,7 +13,7 @@ setup(
         'selenium-wire',
         'packaging',
         'lxml',
-        'undetected-chromedriver',
+        'undetected-chromedriver>=3.1.5r4',
         'cloudscraper',
         ]
 )

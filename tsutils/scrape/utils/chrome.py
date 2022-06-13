@@ -44,7 +44,7 @@ class Chrome(uc.Chrome):
             '--disable-dev-shm-usage',
             '--window-size=1280,1024'
             ]}
-
+    
     def __init__(self, **settings) -> None:
         """
         Compile settings then load ChromeDriver instance and set important

@@ -2,5 +2,5 @@ requests
 selenium-wire
 packaging
 lxml
-undetected-chromedriver
+undetected-chromedriver>=3.1.5r4
 cloudscraper

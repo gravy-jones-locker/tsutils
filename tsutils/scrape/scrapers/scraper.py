@@ -6,6 +6,7 @@ import logging
 import time
 
 from typing import Callable
+from requests.exceptions import Timeout
 
 from ...common.datautils import update_defaults
 from ..models.response import Response
@@ -15,7 +16,11 @@ from ..utils.constants import CAPTCHA_STRS
 
 logger = logging.getLogger('tsutils')
 
-CATCH_EXCEPTIONS = (RequestFailedError, *PROXY_EXCEPTIONS)
+CATCH_EXCEPTIONS = (
+    RequestFailedError, 
+    Timeout,
+    *PROXY_EXCEPTIONS,
+    )
 
 class Scraper:
     """
