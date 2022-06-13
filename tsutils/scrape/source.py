@@ -250,6 +250,7 @@ class DefensiveSource(Source):
             self.scraper._host = self.driver._chrome.host
             return super().scrape_url(url, ad_fields, **kwargs)
         except ResourceNotFoundError:
+            logger.info('404 raised - skipping')
             return BaseSource.Result(None, {})
         except ScrapeFailedError:
             logger.debug('', exc_info=1)
@@ -276,6 +277,7 @@ class DefensiveSource(Source):
             return self._parse_response(resp, {})
         
         except ResourceNotFoundError:
+            logger.info('404 raised - skipping')
             return BaseSource.Result(None, {})
 
         except ScrapeFailedError as exc:

@@ -7,17 +7,17 @@ from __future__ import annotations
 
 import cloudscraper
 import requests
-
-from typing import Callable
+import logging
 
 from ..scrapers.scraper import Scraper
 from ..models.response import Response
 from ..models.hosts import Host
-from ...common.pool import Pool
 
 # Requester instances are shared between Sources wherever possible (i.e. when
 # their settings match).
 _instances = []
+
+logger = logging.getLogger('tsutils')
 
 class Requester(Scraper):
     """
@@ -26,31 +26,12 @@ class Requester(Scraper):
     """
     defaults = {
         **Scraper.defaults,
-        "num_threads": 3,
         "timeout": 5,
-        "prongs": 3,
-        "spin_hosts": True,
         "content_types": [
             'text/html'
         ],
         "use_session": False
     }
-    class Decorators:
-        
-        @classmethod
-        def thread_request(decs, func: Callable) -> Callable:
-            """
-            Execute the given request with appropriate threading.
-            """
-            def inner(requester, *args, **kwargs) -> Response:
-                with requester._configure_pool() as pool:
-                    prongs = requester._settings["prongs"]
-                    if not requester._settings["spin_hosts"]:
-                        prongs = 1
-                    for _ in range(prongs):
-                        pool.submit(func, requester, *args, **kwargs)
-                    return pool.execute()
-            return inner
 
     def __init__(self, **settings) -> None:
         """
@@ -89,11 +70,10 @@ class Requester(Scraper):
 
     @property
     def host(self) -> Host:
-        if self._settings["spin_hosts"] or self._host is False:
+        if self._host is False:
             self._host = next(self._hosts)
         return self._host
 
-    @Decorators.thread_request
     @Scraper.Decorators.handle_response
     def get(self, url: str, **kwargs) -> Response:
         """
@@ -129,17 +109,8 @@ class Requester(Scraper):
         return {**host.proxy_dict, **user_proxies}
     
     def _rotate_host(self) -> None:
-        if self._settings["spin_hosts"]:
-            return
         self._host = next(self._hosts)
     
-    def _configure_pool(self) -> Pool:
-        return Pool.setup(
-            num_threads=self._settings["num_threads"],
-            stop_early=True,
-            raise_errs=False,
-            log_step=0)
-
 class StaticRequester(Requester):
     """
     The StaticRequester interface is replica of the usual Requester
@@ -148,7 +119,6 @@ class StaticRequester(Requester):
     defaults = {
         **Requester.defaults,
         "rotate_host": False,
-        "spin_hosts": False,
     }
 
 class DefensiveRequester(StaticRequester):
