@@ -1,5 +1,6 @@
 LICENSE.txt
 MANIFEST.in
+pyproject.toml
 setup.py
 tsutils/__init__.py
 tsutils.egg-info/PKG-INFO
