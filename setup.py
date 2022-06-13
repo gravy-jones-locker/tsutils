@@ -11,7 +11,6 @@ setup(
     install_requires=[
         'requests',
         'selenium-wire',
-        'selenium',
         'packaging',
         'lxml',
         'undetected-chromedriver>=3.1.5r4',
